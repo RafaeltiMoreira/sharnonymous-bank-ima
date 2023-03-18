@@ -17,19 +17,21 @@ form.addEventListener('submit', (e) => {
     let content = document.querySelector('.content');
     content.classList.add('emailSent');
     content.innerHTML = 
-        `E-mail de recuperação<br>enviado para<br>${email.value}<br><span>Enviado</span>`
+        `E-mail de recuperação<br>enviado para<br>${email.value}<br><p>Enviado</p>
+        <span class="material-icons" id="done-icon">done</span> 
+        `
     ;
     form.style.display = 'none';
 });
 
-function emailValido(email) {
-    const emailRegex = new RegExp(
-        /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-z]{2,}$/
-    );
+    function emailValido(email) {
+        const emailRegex = new RegExp(
+            /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-z]{2,}$/
+        );
 
-    if(emailRegex.test(email)) {
-        return true;
+        if(emailRegex.test(email)) {
+            return true;
+        }
+
+        return false;
     }
-
-    return false;
-}

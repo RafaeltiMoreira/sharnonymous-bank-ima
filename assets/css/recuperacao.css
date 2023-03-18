@@ -60,7 +60,7 @@ body {
 #form input {
     width: 100%;
     border: 1px solid #999;
-    padding: 10px;
+    padding: 8px;
     outline: 0;
     font-size: 1.1rem;
     border-radius: 5px;
@@ -130,6 +130,24 @@ footer p {
     font-size: 1.1rem;
 }
 
-.emailSent span {
+.emailSent p {
     font-size: 1.9rem;
+    color: #2C053B;
+}
+
+.content a {
+    text-decoration: none;
+    display: flex;
+    align-self: self-start;
+}
+
+#back-icon {
+    font-size: 2rem;
+    display: flex;
+    align-self: flex-start;
+    color: #000;
+}
+
+#done-icon {
+    font-size: 4rem;
 }
