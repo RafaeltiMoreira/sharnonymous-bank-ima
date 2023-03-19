@@ -39,12 +39,22 @@ body {
     gap: 30px;
 }
 
+.content a {
+    text-decoration: none;
+    display: flex;
+    align-self: self-start;
+}
+
+#back-icon {
+    font-size: 2rem;
+}
+
 .content p {
     color: #555;
     font-size: 1.2rem;
 }
 
-.content span {
+.content p span {
     color: #2C053B;
     font-weight: bold;
     font-size: 1.2rem;
@@ -54,29 +64,20 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 300px;
+    width: 60%;
 }
 
 #form input {
-    width: 100%;
     border: 1px solid #999;
     padding: 8px;
     outline: 0;
     font-size: 1.1rem;
     border-radius: 5px;
-    color: #2C053B;
-    font-weight: 600;
-}
-
-#form input::placeholder {
-    font-weight: 400;
 }
 
 #form button {
-    display: block;
     border: 0;
     cursor: pointer;
-    width: 100%;
     margin-top: 40px;
     padding: 20px;
     font-weight: 600;
@@ -84,16 +85,21 @@ body {
     color: #2C053B;
     background-color: #b1aeae;
     border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-#form button:focus {
-    border-bottom: 1px solid #000;
 }
 
 #form button:hover {
     background-color: #2C053B;
     color: #fff;
+}
+
+#form button:disabled {
+    opacity: .4;
+    cursor: default;
+}
+
+#form button:disabled:hover {
+    background-color: #b1aeae;
+    color: #2C053B;
 }
 
 footer {
@@ -112,16 +118,6 @@ footer p {
     color: #fff;
 }
 
-.error {
-    border: 1px solid #b40909 !important;
-}
-
-.errorMessage {
-    color: red;
-    text-align: center;
-    margin-top: 10px;
-}
-
 .emailSent {
     color: #555;
     font-weight: bold;
@@ -135,19 +131,15 @@ footer p {
     color: #2C053B;
 }
 
-.content a {
-    text-decoration: none;
-    display: flex;
-    align-self: self-start;
-}
-
-#back-icon {
-    font-size: 2rem;
-    display: flex;
-    align-self: flex-start;
-    color: #000;
-}
-
 #done-icon {
     font-size: 4rem;
+    color: #2C053B;
+    font-weight: bold;
+}
+
+.access a {
+    color: #000;
+    font-weight: 400;
+    text-decoration: underline;
+    font-size: .9rem;
 }

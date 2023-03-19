@@ -17,6 +17,7 @@
       <div class="logo">
         <img src="assets/images/logo2.png" alt="logo">
       </div>
+      <hr>
     </header>
     <main class="main">
       <div class="content">
@@ -28,9 +29,8 @@
           de recuperação da senha</p>
       </div>
       <form id="form" method="post">
-          <input type="email" id="email" placeholder="Email">
-          <div class="msgErro"></div>
-          <button type="submit">Enviar</button>
+          <input type="email" id="email" placeholder="Email" onchange="toggleButton()">
+          <button type="submit" id="btn" disabled>Enviar</button>
       </form>
     </main>
     <footer>
