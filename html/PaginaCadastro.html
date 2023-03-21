@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>S#harnonymous Bank</title>
+    
+    
+  </head>
+  <body>
+    <div id="main-container">
+      <h1>Cadastre-se nos campos abaixo para abrir sua conta no Imã Pay</h1>
+      <form id="register-form">
+        <div class="full-box">
+          <label for="cpf">CPF </label>
+          <input
+            type="number_formatr"
+            class="form-control cpf-mask"
+            name="cpf"
+            pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+            id="cpf"
+            placeholder="Digite seu CPF (Ex: 000.000.000-00)"
+            data-max-length="14"
+          />
+        </div>
+
+        <div class="full-box">
+          <label for="">Nome </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Digite seu Nome Completo"
+          />
+        </div>
+
+        <div class="ful-box"></div>
+          <label for="birth">Data de Nascimento</label>
+          <input 
+          type="number_format" 
+          name="birth" 
+          id="birth" 
+      </div>
+
+       <div id="filter"
+       <h4>Sexo</h4>
+       <select id="filter-select">
+        <option value="no choice"></option>
+        <option value="feminine">F</option>
+        <option value="masculine">M</option>
+       </select>
+       <input 
+          type="number_format" 
+
+    
+
+        <div class="full-box">
+          <label for="">Celular </label>
+          <input
+            type="number_format"
+            class="form-control phone-ddd-mask"
+            name="cell phone"
+            id="cell phone"
+            placeholder="Digite seu Celular (Ex: (00) 00000 0000)"
+          />
+        </div>
+
+        <div class="full-box">
+          <label for="email">E-mail </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Digite seu E-mail"
+            data-min-length="3"
+            data-email-validate
+          />
+        </div>
+
+
+
+        <div class="full-box">
+          <label for="txtCep">CEP</label>
+          <input
+            type="text"
+            name="cep"
+            id="txtCep"
+            placeholder="Digite seu Cep sem o -"
+          />
+          
+        </div>
+
+        <div class="full-box">
+          <label for="">Rua</label>
+          <input
+            type="text"
+            name="rua"
+            id="txtRua"
+          />
+        </div>
+
+        <div class="full-box">
+          <label for="">Complemento</label>
+          <input
+            type="text"
+            name="complemento"
+            id="txtComplemento"
+          />
+        </div>
+
+        <div class="full-box">
+          <label for="">Bairro</label>
+          <input
+            type="text"
+            name="bairro"
+            id="txtairr"
+          />
+        </div>
+
+        <div class="full-box">
+          <label for="">Cidade</label>
+          <input
+            type="text"
+            name="cidade"
+            id="txtCidade"
+          />
+        </div>
+
+        <div class="full-box">
+          <label for="">Estado</label>
+          <input
+            type="text"
+            name="estado"
+            id="txtEstado"
+          />
+        </div>
+
+      
+
+
+
+
+        <div class="full-box">
+          <label for="password">Senha </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Digite sua Senha"
+            data-equal="password"
+          />
+        </div>
+
+        <div class="full-box">
+          <label for="passconfirmation">Confirmação de Senha </label>
+          <input
+            type="password"
+            name="passconfirmation"
+            id="passconfirmation"
+            placeholder="Confirme sua Senha"
+          />
+        </div>
+
+        <div class="full-box">
+          <input type="checkbox" name="agreement" id="agreement" />
+          <label for="agreement" id="agreement-label"
+            >Eu li e aceito os <a href="#"> termos de uso</a></label
+          >
+        </div>
+
+        <div class="full-box">
+          <input type="submit" id="btn-submit" value="ENVIAR" />
+        </div>
+      </form>
+    </div>
+    <p class="error-validation template"></p>
+    <script type="text/javaScript" src="cep.js"></script>
+  </body>
+</html>
