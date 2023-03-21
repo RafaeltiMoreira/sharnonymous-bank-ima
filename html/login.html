@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../frontend/css/form-enter.css" />
+    <title>Imã Pay</title>
+    <link rel="icon" href="../frontend/assets/images/favicon.png" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <a class="logo" href="init.html"
+          ><img
+            src="../frontend/assets/images/logo-pay-ima.png"
+            alt="Logo Imã Pay"
+        /></a>
+        <a class="back" href="init.html">Voltar</a>
+      </header>
+      <form id="my-form">
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Acessar conta</legend>
+
+            <div class="input-wrapper">
+              <label for="form-email">
+                E-mail <span>(digite um e-mail que mais utilize)</span>
+              </label>
+              <input type="email" name="form-email" id="form-email" required />
+            </div>
+
+            <div class="input-wrapper-pass">
+              <label for="form-password">
+                Senha <span>(mínimo de 6 caracteres)</span>
+              </label>
+              <input
+                type="password"
+                name="form-password"
+                id="form-password"
+                required
+                minlength="6"
+              />
+            </div>
+            <a class="forgot" href="#">Esqueci minha senha</a>
+          </div>
+        </fieldset>
+      </form>
+
+      <footer>
+        <input type="submit" value="Salvar" form="my-form" />
+      </footer>
+    </div>
+    <script src="../frontend/js/script.js"></script>
+  </body>
+</html>
