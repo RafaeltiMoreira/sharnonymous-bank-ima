@@ -11,7 +11,7 @@ form.addEventListener('submit', (e) => {
         `E-mail de recuperação<br>enviado para<br>${email.value}<br><p>Enviado</p>
         <span class="material-icons" id="done-icon">done</span>
         <div class="access">
-            <a href="#">Acessar conta</a>
+            <a href="login.html">Acessar conta</a>
         </div>
         `
     ;

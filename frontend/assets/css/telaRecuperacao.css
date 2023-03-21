@@ -3,6 +3,7 @@
   --btn-hover: #f03c7b;
   --white: #fff;
   --ice: #ccc;
+  --body: #efefef;
   --background-modal: #f0f2f5;
   --dark: #1e1c2a;
   --theme: #2c053b;
@@ -18,12 +19,19 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  background: var(--body);
 }
 
-.logo {
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0.1rem 0.5rem var(--ice);
+}
+
+.logo a {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .logo img {
@@ -39,12 +47,11 @@ body {
   margin-top: 40px;
   gap: 50px;
   height: 26rem;
-  /*
-  box-shadow: 1px 1px 4px #000;
-  */
   box-shadow: 0 0.1rem 0.5rem var(--ice);
   width: 500px;
   border-radius: 30px;
+  background-color: #fff;
+  animation: fromLeft 1.2s;
 }
 
 .content {
@@ -83,11 +90,14 @@ body {
 }
 
 #form input {
+  background: #fafafc;
   border: 1px solid #999;
   padding: 8px;
   outline: 0;
   font-size: 1.1rem;
-  border-radius: 5px;
+  border-radius: 10px;
+  color: #4e4958;
+  height: 42px;
 }
 
 #form button {
@@ -137,7 +147,7 @@ footer p {
   color: #555;
   font-weight: bold;
   text-align: center;
-  line-height: 30px;
+  line-height: 33px;
   font-size: 1.1rem;
 }
 
@@ -157,4 +167,21 @@ footer p {
   font-weight: 400;
   text-decoration: underline;
   font-size: 0.9rem;
+}
+
+.access a:hover {
+  text-decoration: none;
+  color: var(--theme-dark);
+}
+
+@keyframes fromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

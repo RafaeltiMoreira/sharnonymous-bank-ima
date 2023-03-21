@@ -28,7 +28,6 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   box-shadow: 0 0.1rem 0.5rem var(--ice);
   width: 100%;
   background: var(--white);
