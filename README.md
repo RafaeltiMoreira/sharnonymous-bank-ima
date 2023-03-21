@@ -1,10 +1,7 @@
 <h1 align="center"S#harnonymous</h1>			
 <br />
 
-
-<h2 align="center">🚧🚀 Em desenvolvimento 🚀🚧</h2> 
-
-
+<h2 align="center">🚧🚀 Em desenvolvimento 🚀🚧</h2>
 
 ## 💻 Sobre o projeto
 
@@ -12,15 +9,15 @@
 
 <!--ts-->
 
- * [Sobre o projeto](#-sobre-o-projeto)
-   * [Funcionalidades](#%EF%B8%8F-funcionalidades)
-   * [Layout](#-layout)
-   * [Como executar o projeto](#-como-executar-o-projeto)
-   * [Rodando a aplicação](#-rodando-a-aplicação)
-   * [Tecnologias](#-tecnologias)
-   * [Contribuições](#-contribuições)
-   * [Licença](#-licença)
-<!--te-->
+- [Sobre o projeto](#-sobre-o-projeto)
+  - [Funcionalidades](#%EF%B8%8F-funcionalidades)
+  - [Layout](#-layout)
+  - [Como executar o projeto](#-como-executar-o-projeto)
+  - [Rodando a aplicação](#-rodando-a-aplicação)
+  - [Tecnologias](#-tecnologias)
+  - [Contribuições](#-contribuições)
+  - [Licença](#-licença)
+  <!--te-->
 
 ---
 
@@ -47,10 +44,10 @@ O layout da aplicação está disponível no Netlify:
 [Imagens do projeto]
 
 ```
+
 ---
 
 <br />
-
 
 ---
 
@@ -59,7 +56,7 @@ O layout da aplicação está disponível no Netlify:
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/).
 
 ---
@@ -73,6 +70,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 [Descrição aqui]
 
 ```
+
 ---
 
 <br />
@@ -86,6 +84,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <br />
 
 ## 💻 Contribuições
+
 ---
 
 <table>
@@ -110,13 +109,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
  <br />
    <sub><b>Isabela Schadt</b></sub><br />>Front-end & Back-end</a><a href="https://imalearningplace.com/" title="Imã Learning Place">💻</a></a>
  </td>
-
-<td align="center">
-  <a href="https://github.com/lettyciasilva">
-    <img src="https://avatars.githubusercontent.com/u/104375979?v=4" width="95"/> 
-<br />
-  <sub><b>Lettycia Cristina</b></sub><br />Front-end & Back-end</a><a href="https://imalearningplace.com/" title="Imã Learning Place">💻</a></a>
-</td>
  
 <td align="center">
   <a href="https://github.com/LuciaSantos81">
