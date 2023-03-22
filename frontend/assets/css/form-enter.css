@@ -22,7 +22,7 @@
 }
 
 header {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .logo {
@@ -53,12 +53,12 @@ label span {
 .logo img {
   display: flex;
   align-items: center;
-  width: 182px;
-  height: 158px;
+  width: 20%;
 }
 
 #back {
   display: flex;
+  width: 0;
   justify-content: start;
   color: var(--theme);
   font-size: 2.2rem;
@@ -101,7 +101,6 @@ form {
   border-radius: 10px 10px 0 0;
   box-shadow: 0 0.1rem 0.5rem var(--ice);
   padding: 0 64px 0 64px;
-  margin-top: 54px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -253,6 +252,11 @@ footer input:hover {
 }
 
 @media (max-width: 876px) {
+  #back {
+    font-size: 1.8rem;
+    top: -44px;
+  }
+
   .two-cols {
     flex-direction: column;
   }

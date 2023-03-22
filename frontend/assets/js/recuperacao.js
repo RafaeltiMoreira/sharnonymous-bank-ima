@@ -8,8 +8,9 @@ form.addEventListener('submit', (e) => {
     let content = document.querySelector('.content');
     content.classList.add('emailSent');
     content.innerHTML = 
-        `E-mail de recuperação<br>enviado para<br>${email.value}<br><p>Enviado</p>
-        <span class="material-icons" id="done-icon">done</span>
+    `E-mail de recuperação<br>enviado para<br>${email.value}
+    <div><span class="material-icons" id="done-icon">done</span>
+    <p>Enviado</p></div>
         <div class="access">
             <a href="login.html">Acessar conta</a>
         </div>
