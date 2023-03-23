@@ -1,12 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  list-style: none;
-  text-decoration: none;
-}
-
 :root {
   --red: #ce1051;
   --btn-hover: #f03c7b;
@@ -19,9 +10,18 @@
   --gap: 3rem;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
 body {
   color: var(--dark);
-  background: var(--white);
+  background: var(--background-modal);
 }
 
 .navigation {
@@ -30,7 +30,7 @@ body {
   align-items: center;
   box-shadow: 0 0.1rem 0.5rem var(--ice);
   width: 100%;
-  background: var(--white);
+  background: var(--background-modal);
   transition: all 0.5s;
   position: fixed;
 }

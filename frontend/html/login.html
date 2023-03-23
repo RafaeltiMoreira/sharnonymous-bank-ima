@@ -18,7 +18,7 @@
     />
 
     <link rel="stylesheet" href="../assets/css/form-enter.css" />
-    <title>Imã Pay</title>
+    <title>Tela de login | Imã Pay</title>
     <link rel="icon" href="../assets/images/favicon.png" />
   </head>
 
@@ -26,9 +26,13 @@
     <div class="container">
       <header>
         <div class="logo">
-          <img src="../assets/images/logo-pay-ima.png" alt="Logo ImãPay">
+          <img src="../assets/images/logo-pay-ima.png" alt="Logo ImãPay" />
         </div>
-        <a class="material-icons" id="back" href="init.html">arrow_back_ios</a>
+        <div class="div-back">
+          <a class="material-icons" id="back" href="init.html"
+            >arrow_back_ios</a
+          >
+        </div>
       </header>
       <form id="my-form">
         <fieldset>
@@ -37,9 +41,16 @@
 
             <div class="input-wrapper">
               <label for="form-email">
-                E-mail <span>(digite um e-mail que mais utilize)</span>
+                E-mail cadastrado
+                <span>(digite um e-mail que mais utilize)</span>
               </label>
-              <input type="email" name="form-email" id="form-email" required />
+              <input
+                type="email"
+                name="form-email"
+                id="form-email"
+                placeholder="Digite seu e-mail"
+                required
+              />
             </div>
 
             <div class="input-wrapper-pass">
@@ -50,6 +61,7 @@
                 type="password"
                 name="form-password"
                 id="form-password"
+                placeholder="Digite sua senha"
                 required
                 minlength="6"
               />
@@ -59,11 +71,10 @@
             >
           </div>
         </fieldset>
+        <input class="btn" type="submit" value="Entrar" form="my-form" />
       </form>
 
-      <footer>
-        <input type="submit" value="Salvar" form="my-form" />
-      </footer>
+      <footer></footer>
     </div>
     <script src="../js/script.js"></script>
   </body>
