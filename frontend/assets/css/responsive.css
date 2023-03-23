@@ -119,10 +119,6 @@
     padding: 15px 45px !important;
   }
 
-  .modal {
-    margin: 15px 15px;
-  }
-
   .group.actions {
     font-size: 12px !important;
   }
@@ -130,5 +126,21 @@
   .modal {
     width: 0 auto !important;
     height: 0 auto !important;
+    margin: 15px 15px;
+  }
+
+  .text-h3 {
+    font-size: 1.2rem !important;
+    justify-content: center !important;
+  }
+
+  #form {
+    flex-direction: inherit;
+  }
+}
+
+@media (max-width: 439px) {
+  #form {
+    flex-direction: column;
   }
 }

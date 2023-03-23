@@ -106,7 +106,6 @@ label {
   text-align: center;
 }
 
-
 .input-wrapper input {
   background: #fafafc;
   border: 1px solid #e6e6f0;
@@ -152,6 +151,12 @@ footer {
 
 footer p {
   color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 @keyframes fromLeft {
@@ -163,6 +168,16 @@ footer p {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes fromTop {
+  from {
+    transform: translateY(-200px);
+  }
+
+  to {
+    transform: translateY(0);
   }
 }
 
@@ -224,4 +239,14 @@ footer p {
 .access a:hover {
   text-decoration: none;
   color: var(--theme);
+}
+
+@media (max-width: 876px) {
+  #back {
+    font-size: 1.6rem;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
 }
