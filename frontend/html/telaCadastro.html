@@ -61,6 +61,7 @@
               class="form-control"
               required
             />
+            <div id="erroNascimento" class="error"></div>
           </div>
           <div class="form-group">
             <label for="cpf">CPF:</label>
@@ -71,6 +72,7 @@
               class="form-control"
               required
             />
+            <div id="erroCPF" class="error"></div>
           </div>
           <div class="form-group">
             <label for="sexo">Gênero:</label>
@@ -164,7 +166,7 @@
               class="form-control"
               required
             />
-            <div id="erro" class="error"></div>
+            <div id="erroCEP" class="error"></div>
           </div>
           <div class="form-group">
             <label for="logradouro">Logradouro:</label>
@@ -233,6 +235,8 @@
         </div>
       </form>
     </div>
-    <script src="../assets/js/cadastro.js"></script>
+    <script src="../assets/js/request-CEP.js"></script>
+    <script src="../assets/js/valida-cpf.js"></script>
+    <script src="../assets/js/valida-idade.js"></script>
   </body>
 </html>

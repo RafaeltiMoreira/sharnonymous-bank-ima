@@ -1,5 +1,6 @@
-var mensagemErro = document.getElementById('erro')
+var mensagemErroCEP = document.getElementById('erroCEP')
 async function buscaEndereco(CEP) {
+    mensagemErroCEP.innerHTML = ""
     try {
         var consultaCEP = await fetch(`https://viacep.com.br/ws/${CEP}/json/`)
         var consultaCEPConvertida = await consultaCEP.json()
@@ -22,7 +23,7 @@ async function buscaEndereco(CEP) {
         console.log(consultaCEPConvertida)
         return consultaCEPConvertida;
     } catch (erro) {
-        mensagemErro.innerHTML = "<p>CEP inválido. tente novamente com um CEP diferente!</p>"
+        mensagemErroCEP.innerHTML = "<p>CEP inválido. tente novamente com um CEP diferente!</p>"
         console.log(erro)
     }
 }
@@ -35,7 +36,7 @@ cep.addEventListener('focusout', () => {
         logradouro.value = ""
         bairro.value = ""
         complemento.value = ""
-        mensagemErro.innerHTML = ""
+        mensagemErroCEP.innerHTML = ""
     } else {
         buscaEndereco(cep.value)
     }
