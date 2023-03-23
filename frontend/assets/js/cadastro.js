@@ -1,6 +1,5 @@
+var mensagemErro = document.getElementById('erro')
 async function buscaEndereco(CEP) {
-    var mensagemErro = document.getElementById('erro')
-    mensagemErro.innerHTML = ""
     try {
         var consultaCEP = await fetch(`https://viacep.com.br/ws/${CEP}/json/`)
         var consultaCEPConvertida = await consultaCEP.json()
@@ -36,6 +35,7 @@ cep.addEventListener('focusout', () => {
         logradouro.value = ""
         bairro.value = ""
         complemento.value = ""
+        mensagemErro.innerHTML = ""
     } else {
         buscaEndereco(cep.value)
     }
