@@ -20,34 +20,41 @@
     <link rel="stylesheet" href="../assets/css/telaRecuperacao.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="logo">
-        <a href="init.html">
-          <img src="../assets/images/logo-pay-ima.png" alt="logo" />
-        </a>
-      </div>
-    </header>
-    <main class="main">
-      <div class="content">
-        <a href="login.html">
-          <span class="material-icons" id="back-icon">arrow_back_ios</span>
-        </a>
-        <h3>Recuperar senha</h3>
-        <p>
-          Digite o endereço de <span>e-mail</span> que você usa para fazer login
-          no Imã Pay
-        </p>
-      </div>
-      <form id="form" method="post">
-        <input
-          type="email"
-          id="email"
-          placeholder="Email"
-          onchange="toggleButton()"
-        />
-        <button type="submit" id="btn" disabled>Enviar</button>
-      </form>
-    </main>
+    <div class="container">
+      <header>
+        <div class="logo">
+            <img src="../assets/images/logo-pay-ima.png" alt="logo" />
+        </div>
+        <div class="div-back">
+          <a class="material-icons" id="back" href="login.html"
+            >arrow_back_ios</a
+          >
+        </div>
+      </header>
+        <form>
+          <div class="form-content">
+            <fieldset>
+              <div class="fieldset-wrapper">
+                <legend>Recuperar senha</legend>
+                <div class="input-wrapper">
+                  <label for="form-email">
+                    Digite o endereço de <span>e-mail</span> que você usa para fazer login
+                    no Imã Pay
+                  </label>
+                  <input
+                  type="email"
+                  name="form-email"
+                  id="form-email"
+                  placeholder="Email"
+                  onchange="toggleButton()"
+                  />
+              </div>
+            </fieldset>
+            <input type="submit" class="btn" value="Enviar" id="button" disabled/>
+          </div>
+          <div id="box"></div>
+        </form>
+    </div>
     <footer>
       <p>
         Sharp Coders | S#harnonymous 2022/2023 - Todos os direitos reservados ©
