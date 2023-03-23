@@ -30,12 +30,13 @@ async function buscaEndereco(CEP) {
 
 var cep = document.getElementById('cep')
 cep.addEventListener('focusout', () => {
-    if(cep ===""){
+    if (cep.value === "") {
         cidade.value = ""
         estado.value = ""
         logradouro.value = ""
         bairro.value = ""
         complemento.value = ""
-    }else {
-    buscaEndereco(cep.value)
-}})
+    } else {
+        buscaEndereco(cep.value)
+    }
+})
