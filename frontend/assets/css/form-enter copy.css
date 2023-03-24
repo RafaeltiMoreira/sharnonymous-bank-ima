@@ -74,11 +74,6 @@ body {
   background: var(--body-enter);
 }
 
-/*#my-form {
-  display: flex;
-  width: 100%;
-}*/
-
 body::before {
   content: "";
   width: 100%;
@@ -110,7 +105,6 @@ form {
   border-radius: 10px;
   box-shadow: 0 0.1rem 0.5rem var(--ice);
   padding: 64px;
-  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   gap: 30px;
