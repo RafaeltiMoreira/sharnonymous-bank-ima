@@ -1,15 +1,14 @@
 :root {
   --red: #ce1051;
   --btn-hover: #f03c7b;
-  --body-enter: #efefef;
   --white: #fff;
   --ice: #ccc;
+  --body: #efefef;
   --background-modal: #f0f2f5;
   --dark: #1e1c2a;
   --theme: #2c053b;
   --theme-dark: #1b0c2f;
   --gap: 3rem;
-  --gap-min: 2rem;
 }
 
 * {
@@ -21,22 +20,12 @@
   text-decoration: none;
 }
 
-header {
-  margin-top: 20px;
-}
-
 legend {
   font-weight: bold;
   font-size: 24px;
   text-align: center;
   color: var(--theme);
-  padding: 30px 0 35px;
-}
-
-header p,
-label,
-label span {
-  font-family: "Poppins", sans-serif;
+  margin: 30px 0 0 0;
 }
 
 .logo {
@@ -70,45 +59,25 @@ label span {
   font-weight: bold;
 }
 
-body {
-  background: var(--body-enter);
-}
-
-body::before {
-  content: "";
-  width: 100%;
-  height: 436px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
 .container {
   max-width: 650px;
   margin: 0 auto;
   width: 90%;
 }
 
-.forgot {
+.form-content {
   display: flex;
-  justify-content: flex-end;
-  color: var(--theme);
-  font-size: 14px;
-  font-weight: bold;
-  position: relative;
-  top: -25px;
+  flex-direction: column;
 }
 
 form {
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 0.1rem 0.5rem var(--ice);
-  padding: 64px;
+  padding: 34px;
+  height: 430px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  animation: fromTop 1.2s;
 }
 
 fieldset {
@@ -121,19 +90,10 @@ fieldset {
   gap: var(--gap-min);
 }
 
-.two-cols {
-  display: flex;
-  gap: 22px;
-}
-
-.two-cols input {
-  width: 300px;
-}
-
-.input-wrapper,
-.input-wrapper-pass {
+.input-wrapper {
   display: flex;
   flex-direction: column;
+  margin: 60px 0;
 }
 
 label {
@@ -142,13 +102,7 @@ label {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 8px;
-}
-
-label span {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 20px;
-  color: var(--theme);
+  text-align: center;
 }
 
 .input-wrapper input {
@@ -162,48 +116,6 @@ label span {
   color: #4e4958;
 }
 
-.input-wrapper-pass input {
-  background: #fafafc;
-  border: 1px solid #e6e6f0;
-  border-radius: 10px;
-  height: 56px;
-  padding: 0 15px;
-  font-size: 14px;
-  font-family: "Poppins", sans-serif;
-  color: #4e4958;
-}
-
-.fieldset-wrapper2 h2 {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 34px;
-  color: #535971;
-  margin-top: 32px;
-  margin-bottom: 8px;
-}
-
-.fieldset-wrapper2 h2:nth-child(4) {
-  margin-top: 16px;
-}
-
-.three-cols {
-  display: flex;
-}
-
-.three-cols div:nth-child(1) input {
-  width: 300px;
-  margin-right: 32px;
-}
-
-.three-cols div:nth-child(2) input {
-  width: 140px;
-  margin-right: 10px;
-}
-
-.three-cols div:nth-child(3) input {
-  width: 140px;
-}
-
 .btn {
   font-weight: bold;
   font-size: 20px;
@@ -213,7 +125,6 @@ label span {
   width: 100%;
   display: flex;
   justify-content: center;
-
   color: #ffffff;
   background: var(--red);
   border: none;
@@ -269,55 +180,72 @@ footer p {
   }
 }
 
+#box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+#box a {
+  text-decoration: none;
+  display: flex;
+  align-self: self-start;
+}
+
+#back-icon {
+  font-size: 2rem;
+}
+
+#box p {
+  color: #2c053b;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.btn:disabled:hover {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.emailSent {
+  color: #555;
+  font-weight: bold;
+  text-align: center;
+  line-height: 33px;
+  font-size: 1.1rem;
+}
+
+#done-icon {
+  font-size: 4rem;
+  color: rgb(3, 151, 3);
+  font-weight: bold;
+}
+
+.access a {
+  color: var(--red);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.access a:hover {
+  text-decoration: none;
+  color: var(--theme);
+}
+
 @media (max-width: 876px) {
   #back {
     font-size: 1.6rem;
   }
 
-  .forgot {
-    font-size: 12px;
-  }
-
-  .two-cols {
-    flex-direction: column;
-  }
-
-  .three-cols {
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  .three-cols div:nth-child(1) input {
-    width: 100%;
-    margin-right: 0;
-  }
-
-  .three-cols div:nth-child(2) input {
-    width: 100%;
-  }
-
-  .three-cols div:nth-child(3) input {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .input-wrapper {
-    flex-wrap: wrap;
-  }
-
-  .input-wrapper input {
-    width: 100%;
-  }
-
-  .input-wrapper-pass {
-    flex-wrap: wrap;
-  }
-
-  .input-wrapper-pass input {
-    width: 100%;
-  }
-
   footer p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }

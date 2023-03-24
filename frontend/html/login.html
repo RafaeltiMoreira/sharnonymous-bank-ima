@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script src="https://kit.fontawesome.com/5469a1cfae.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +17,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="../assets/css/form-enter.css" />
+    <link rel="stylesheet" href="../assets/css/login.css" />
     <title>Tela de login | Imã Pay</title>
     <link rel="icon" href="../assets/images/favicon.png" />
   </head>
@@ -38,7 +38,7 @@
         <fieldset>
           <div class="fieldset-wrapper">
             <legend>Acessar conta</legend>
-
+            <div class="errormsg"></div>  
             <div class="input-wrapper">
               <label for="form-email">
                 E-mail cadastrado
@@ -49,7 +49,6 @@
                 name="form-email"
                 id="form-email"
                 placeholder="Digite seu e-mail"
-                required
               />
             </div>
 
@@ -57,16 +56,16 @@
               <label for="form-password">
                 Senha <span>(mínimo de 6 caracteres)</span>
               </label>
-              <input
-                type="password"
-                name="form-password"
-                id="form-password"
-                placeholder="Digite sua senha"
-                required
-                minlength="6"
-              />
+              
+                <input
+                  type="password"
+                  name="form-password"
+                  id="form-password"
+                  placeholder="Digite sua senha"
+                />
+                <i id="eye" class="fa-solid fa-eye" ></i>
             </div>
-            <a class="forgot" href="telaRecuperacao.html"
+            <a class="forgot" href="recovery.html"
               >Esqueci minha senha</a
             >
           </div>
@@ -74,13 +73,7 @@
         <input class="btn" type="submit" value="Entrar" form="my-form" />
       </form>
 
-      <footer>
-        <p>
-          Sharp Coders | S#harnonymous 2022/2023 - Todos os direitos reservados
-          ©
-        </p>
-      </footer>
     </div>
-    <script src="../js/script.js"></script>
+    <script src="../assets/js/login.js"></script>
   </body>
 </html>
