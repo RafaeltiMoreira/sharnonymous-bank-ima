@@ -171,7 +171,7 @@ li {
   margin-top: -290px;
   position: absolute;
   display: none;
-  text-align: center;
+  text-align: left;
 }
 
 #content {
@@ -184,4 +184,5 @@ li {
   font-size: 4rem;
   color: rgb(3, 151, 3);
   font-weight: bold;
+  text-align: center;
 }

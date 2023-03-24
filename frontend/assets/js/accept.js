@@ -65,7 +65,7 @@ botaoConfirmar.addEventListener("click", fnConfirmar);
 function fnConfirmar() {
   let box = document.getElementById("box");
   box.style.display = "flex";
-  setTimeout(() => {
+  /*setTimeout(() => {
     window.location.href = "../html/init.html";
-  }, 1000);
+  }, 1000);*/
 }
