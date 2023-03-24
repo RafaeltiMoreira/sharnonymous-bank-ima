@@ -75,7 +75,7 @@ form {
   border-radius: 10px;
   box-shadow: 0 0.1rem 0.5rem var(--ice);
   padding: 34px;
-  height: 430px;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   animation: fromTop 1.2s;
@@ -145,7 +145,6 @@ footer {
   width: 100%;
   height: 100px;
   position: absolute;
-  bottom: 0;
   left: 0;
 }
 
