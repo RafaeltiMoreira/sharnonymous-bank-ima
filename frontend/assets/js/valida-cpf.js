@@ -64,7 +64,7 @@ function validaSegundoDigito(cpf) {
 }
 
 cpfUsuario.addEventListener('focusout', ()=> {
-    if(cpfUsuario.value == ""){
+    if(cpfUsuario.value === ""){
         mensagemErroCPF.innerHTML = ""
-    }
-    ehUmCPF(cpfUsuario)})
+    }else{
+    ehUmCPF(cpfUsuario)}})
