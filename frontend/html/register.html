@@ -61,6 +61,7 @@
               class="form-control"
               required
             />
+            <div id="erroNascimento" class="error"></div>
           </div>
           <div class="form-group">
             <label for="cpf">CPF:</label>
@@ -71,9 +72,10 @@
               class="form-control"
               required
             />
+            <div id="erroCPF" class="error"></div>
           </div>
           <div class="form-group">
-            <label for="sexo">Sexo:</label>
+            <label for="sexo">Gênero:</label>
             <select id="sexo" name="sexo" class="form-control" required>
               <option value="">Selecione</option>
               <option value="masculino">Masculino</option>
@@ -150,6 +152,7 @@
               class="form-control"
               required
             />
+            <div id="erroEmail" class="error"></div>
           </div>
         </fieldset>
 
@@ -164,6 +167,7 @@
               class="form-control"
               required
             />
+            <div id="erroCEP" class="error"></div>
           </div>
           <div class="form-group">
             <label for="logradouro">Logradouro:</label>
@@ -225,6 +229,18 @@
               required
             />
           </div>
+          <div id="termosDeUso">
+            <div id="checkboxDiv">
+            <input
+            type="checkbox"
+            id="checkbox"
+            name="checkbox"
+            required
+            />
+            <p>Li e concordo com os Termos e Condições de Abertura de Conta, com a Política de Privacidade Imã Pay e com os Termos e Condições de Uso.</p>
+          </div>
+            <a href="#">Ler termos</a>
+          </div>
         </fieldset>
         <button type="button" id="proximo1">Próximo</button>
         <div id="progresso">
@@ -232,6 +248,9 @@
         </div>
       </form>
     </div>
-    <script src=""></script>
+    <script src="../assets/js/request-CEP.js"></script>
+    <script src="../assets/js/valida-cpf.js"></script>
+    <script src="../assets/js/valida-idade.js"></script>
+    <script src="../assets/js/valida-emailECelular.js"></script>
   </body>
 </html>
