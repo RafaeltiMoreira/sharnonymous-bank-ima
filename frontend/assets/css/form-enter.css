@@ -231,26 +231,6 @@ label span {
   background: var(--btn-hover);
 }
 
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--theme);
-  width: 100%;
-  height: 115px;
-  position: fixed;
-}
-
-footer p {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-}
-
 @keyframes fromLeft {
   from {
     opacity: 0;
@@ -319,9 +299,5 @@ footer p {
 
   .input-wrapper-pass input {
     width: 100%;
-  }
-
-  footer p {
-    font-size: 14px;
   }
 }
