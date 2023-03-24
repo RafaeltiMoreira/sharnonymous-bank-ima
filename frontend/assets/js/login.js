@@ -34,20 +34,6 @@ function login() {
         return;
     } 
 
-    senha.addEventListener('change', () => {
-        if(senha.value.length >= 6) {
-            senha.classList.remove('error');
-            return;
-        }
-    })
-
-    if(senha.value.length < 6) {
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = `A senha deve conter 6 caracteres ou mais`;
-        senha.classList.add('error');
-        return;
-    }
-
     for(let i in usuarios) {
         let usuario = usuarios[i];
         if(usuario.email !== email.value && usuario.senha !== senha.value) {

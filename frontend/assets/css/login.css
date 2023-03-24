@@ -221,17 +221,11 @@ label span {
   width: 100%;
   display: flex;
   justify-content: center;
-
   color: #ffffff;
   background: var(--red);
   border: none;
   cursor: pointer;
   transition: all 0.3s;
-}
-
-.error {
-  border: 2px solid var(--btn-hover) !important;
-  outline: 0;
 }
 
 .errormsg {

@@ -20,6 +20,10 @@
   text-decoration: none;
 }
 
+body {
+  background-color: var(--body);
+}
+
 legend {
   font-weight: bold;
   font-size: 24px;
@@ -33,7 +37,7 @@ legend {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   animation: fromLeft 1.2s;
 }
 
@@ -75,7 +79,6 @@ form {
   border-radius: 10px;
   box-shadow: 0 0.1rem 0.5rem var(--ice);
   padding: 34px;
-  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
 }
@@ -114,6 +117,7 @@ label {
   font-size: 14px;
   font-family: "Poppins", sans-serif;
   color: #4e4958;
+  margin-top: 10px;
 }
 
 .btn {
@@ -134,27 +138,6 @@ label {
 
 .btn:hover {
   background: var(--btn-hover);
-}
-
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--theme);
-  width: 100%;
-  height: 100px;
-  position: absolute;
-  left: 0;
-}
-
-footer p {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
 }
 
 @keyframes fromLeft {

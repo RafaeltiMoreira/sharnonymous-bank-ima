@@ -1,85 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/5469a1cfae.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
 
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/5469a1cfae.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
 
-    <link rel="stylesheet" href="../assets/css/login.css" />
-    <title>Tela de login | Imã Pay</title>
-    <link rel="icon" href="../assets/images/favicon.png" />
-  </head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-  <body>
-    <div class="container">
-      <header>
-        <div class="logo">
-          <img src="../assets/images/logo-pay-ima.png" alt="Logo ImãPay" />
-        </div>
-        <div class="div-back">
-          <a class="material-icons" id="back" href="init.html"
-            >arrow_back_ios</a
-          >
-        </div>
-      </header>
-      <form id="my-form">
-        <fieldset>
-          <div class="fieldset-wrapper">
-            <legend>Acessar conta</legend>
-            <div class="errormsg"></div>  
-            <div class="input-wrapper">
-              <label for="form-email">
-                E-mail cadastrado
-                <span>(digite um e-mail que mais utilize)</span>
-              </label>
-              <input
-                type="email"
-                name="form-email"
-                id="form-email"
-                placeholder="Digite seu e-mail"
-              />
-            </div>
+  <link rel="stylesheet" href="../assets/css/login.css" />
+  <title>Tela de login | Imã Pay</title>
+  <link rel="icon" href="../assets/images/favicon.png" />
+</head>
 
-            <div class="input-wrapper-pass">
-              <label for="form-password">
-                Senha <span>(mínimo de 6 caracteres)</span>
-              </label>
-              
-                <input
-                  type="password"
-                  name="form-password"
-                  id="form-password"
-                  placeholder="Digite sua senha"
-                />
-                <i id="eye" class="fa-solid fa-eye" ></i>
-            </div>
-            <a class="forgot" href="recovery.html"
-              >Esqueci minha senha</a
-            >
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="../assets/images/logo-pay-ima.png" alt="Logo ImãPay" />
+      </div>
+      <div class="div-back">
+        <a class="material-icons" id="back" href="init.html">arrow_back_ios</a>
+      </div>
+    </header>
+    <form id="my-form">
+      <fieldset>
+        <div class="fieldset-wrapper">
+          <legend>Acessar conta</legend>
+          <div class="errormsg"></div>
+          <div class="input-wrapper">
+            <label for="form-email">
+              E-mail cadastrado
+              <span>(digite um e-mail que mais utilize)</span>
+            </label>
+            <input type="email" name="form-email" id="form-email" placeholder="Digite seu e-mail" />
           </div>
-        </fieldset>
-        <input class="btn" type="submit" value="Entrar" form="my-form" />
-      </form>
-<<<<<<< HEAD
 
-    </div>
-    <script src="../assets/js/login.js"></script>
-=======
-    </div>
+          <div class="input-wrapper-pass">
+            <label for="form-password">
+              Senha <span>(mínimo de 6 caracteres)</span>
+            </label>
 
-    <script src="../js/script.js"></script>
->>>>>>> f478df1907c1bee55dde7f84ceb11ae3477cf7bf
-  </body>
+            <input type="password" name="form-password" id="form-password" placeholder="Digite sua senha" />
+            <i id="eye" class="fa-solid fa-eye"></i>
+          </div>
+          <a class="forgot" href="recovery.html">Esqueci minha senha</a>
+        </div>
+      </fieldset>
+      <input class="btn" type="submit" value="Entrar" form="my-form" />
+    </form>
+  </div>
+  <script src="../assets/js/login.js"></script>
+</body>
 </html>
