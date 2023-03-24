@@ -14,14 +14,6 @@ body {
   padding: 2rem;
 }
 
-/*
-.logo img {
-  margin-bottom: 2rem;
-  margin-left: 16.5rem;
-  width: 182px;
-  height: 158px;
-}*/
-
 .logo {
   display: flex;
   flex-direction: column;
@@ -43,7 +35,7 @@ fieldset {
 
 legend {
   font-size: 25px;
-  font-family: 'poppins', sans-serif;
+  font-family: "poppins", sans-serif;
   margin-bottom: 16px;
   font-weight: 500;
   background-color: #fff;
@@ -181,10 +173,12 @@ label {
   font-weight: bold;
   margin-top: 2rem;
 }
-#termosDeUso{
+
+#termosDeUso {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  justify-content: center;
+  width: 100%;
   align-items: center;
-  margin: 12px 24px;
+  padding: 30px;
 }
