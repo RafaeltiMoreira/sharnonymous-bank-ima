@@ -92,63 +92,62 @@ As seguintes ferramentas foram usadas na construção do projeto:
   <td align="center">
     <a href="https://github.com/denilsonbezerra" class="circle">
       <img src="https://avatars.githubusercontent.com/u/97971798?v=4" class="circle" width="95"/> 
- <br />
+    <br />
       Denilson Bezerra<br/><sub><b>Front-end & Back-end</b></sub></a><a href="https://imalearningplace.com/" title="Imã Learning Place">💻</a></a>
-</td>
+  </td>
  
  <td align="center">
     <a href="https://github.com/IsabelaSchadt">
       <img src="https://avatars.githubusercontent.com/u/116990892?v=4" width="95"/> 
- <br />
+    <br />
       Isabela Schadt<br/><sub><b>Front-end & Back-end</b></sub></a><a href="https://imalearningplace.com/" title="Imã Learning Place">💻</a></a>
  </td>
  
-<td align="center">
+  <td align="center">
     <a href="https://github.com/LuciaSantos81">
       <img src="https://avatars.githubusercontent.com/u/113800812?v=4" width="95"/> 
-<br />
+  <br />
       Lúcia Maria<br/><sub><b>Front-end & Back-end</b></sub></a><a href="https://imalearningplace.com/" title="Imã Learning Place">💻</a></a>
   </td>
   
   <td align="center">
     <a href="https://github.com/maarcosrx">
     <img src="https://avatars.githubusercontent.com/u/53311469?v=4" width="95"/> 
- <br />
+  <br />
       Marcos Pádua<br/><sub><b>Front-end & Back-end</b></sub></a><a href="https://imalearningplace.com/" title="Imã Learning Place">💻</a></a>
    </td>
 </tr>
   
- <tr>  
+<tr>  
    <td align="center">
      <a href="https://github.com/MatheusHenrique95">
       <img src="https://avatars.githubusercontent.com/u/115824012?v=4" width="95"/> 
- <br>
+    <br />
       Matheus Henrique<br/><sub><b>Front-end & Back-end</b></sub></a><a href="https://imalearningplace.com/" title="Imã Learning Place">💻</a></a>
    </td>
- <br />
 
   <td align="center">
     <a href="https://github.com/denilsonbezerra">
       <img src="https://avatars.githubusercontent.com/u/72143562?v=4" width="95"/> 
- <br />
+  <br />
       Moises Santos<br/><sub><b>Front-end & Back-end</b></sub></a><a href="https://imalearningplace.com/" title="Imã Learning Place">💻</a></a>
   </td>
  
   <td align="center">
-  <a href="https://github.com/RafaelSantos22">
-    <img src="https://avatars.githubusercontent.com/u/98282656?v=4" width="95"/> 
-<br />
-  Rafael Santos<br/><sub><b>Front-end & Back-end</b></sub></a><a href="https://imalearningplace.com/" title="Imã Learning Place">💻</a></a>
-</td>
+    <a href="https://github.com/RafaelSantos22">
+      <img src="https://avatars.githubusercontent.com/u/98282656?v=4" width="95"/> 
+  <br />
+    Rafael Santos<br/><sub><b>Front-end & Back-end</b></sub></a><a href="https://imalearningplace.com/" title="Imã Learning Place">💻</a></a>
+  </td>
  
-<td align="center">
+  <td align="center">
    <a href="https://github.com/RafaeltiMoreira">
     <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/52933778?v=4" width="100px;" alt=""/> 
- <br />
-   Rafael Moreira<br/><sub><b>Front-end & Back-end</b></sub></a><a href="https://imalearningplace.com/" title="Imã Learning Place">💻</a>
-</td>
-
+  <br />
+    Rafael Moreira<br/><sub><b>Front-end & Back-end</b></sub></a><a href="https://imalearningplace.com/" title="Imã Learning Place">💻</a>
+  </td>
 </tr>
+
 </table>
  
 ---
