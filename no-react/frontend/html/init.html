@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/init.css" />
+    <title>Imã Pay</title>
+    <link rel="icon" href="../assets/images/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <nav class="navigation">
+        <a class="logo" href="init.html"
+          ><img src="../assets/images/logo-pay-ima.png" alt="Logo Imã Pay"
+        /></a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="init.html">Início</a>
+          </li>
+          <li class="nav-item-entrar">
+            <a href="login.html">Entrar</a>
+          </li>
+          <li class="nav-item-conta">
+            <a href="register.html">Abrir conta</a>
+          </li>
+        </ul>
+        <div class="menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="home">
+        <div class="home-text">
+          <h4 class="text-h4">Bem-vindos a Imã Pay 🎉</h4>
+          <h1 class="text-h1">Descomplicado e fácil de investir</h1>
+          <p>Na Imã Pay seus investimentos são planejados com especialistas.</p>
+          <a class="home-btn" href="#" onclick="Modal.open()">Investir agora</a>
+        </div>
+        <div class="home-img">
+          <img
+            src="../assets/images/business-ima.svg"
+            alt="Duas pessoas demonstrando um gráfico de investimento."
+          />
+        </div>
+      </section>
+      <!--
+      <section class="team gray">
+        <div class="home-members">
+          <h1 class="team">
+            Abra sua conta agora na Imã Pay e tenha controle total de suas
+            finanças como milhares de pessoas.
+          </h1>
+          <div class="members">
+            <div class="member daniel">
+              <img
+                src="https://avatars.githubusercontent.com/u/119123808?v=4"
+                alt="Daniel"
+              />
+            </div>
+            <div class="member denilson">
+              <img
+                src="https://avatars.githubusercontent.com/u/97971798?v=4"
+                alt="Denilson"
+              />
+            </div>
+            <div class="member isabela">
+              <img
+                src="https://avatars.githubusercontent.com/u/116990892?v=4"
+                alt="Isabela"
+              />
+            </div>
+            <div class="member lucia">
+              <img
+                src="https://avatars.githubusercontent.com/u/113800812?v=4"
+                alt="Lúcia"
+              />
+            </div>
+            <div class="member marcos">
+              <img
+                src="https://avatars.githubusercontent.com/u/53311469?v=4"
+                alt="Marcos"
+              />
+            </div>
+          </div>
+
+          <div class="members">
+            <div class="member matheus">
+              <img
+                src="https://avatars.githubusercontent.com/u/115824012?v=4"
+                alt="Matheus"
+              />
+            </div>
+            <div class="member moises">
+              <img
+                src="https://avatars.githubusercontent.com/u/72143562?v=4"
+                alt="Moises"
+              />
+            </div>
+            <div class="member luis">
+              <img
+                src="https://avatars.githubusercontent.com/u/41549626?v=4"
+                alt="Luis"
+              />
+            </div>
+            <div class="member santos">
+              <img
+                src="https://avatars.githubusercontent.com/u/98282656?v=4"
+                alt="Rafael Santos"
+              />
+            </div>
+            <div class="member moreira">
+              <img
+                src="https://avatars.githubusercontent.com/u/52933778?v=4"
+                alt="Rafael Moreira"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    -->
+      <div class="modal-init">
+        <div class="modal">
+          <div class="group actions">
+            <a href="#" onclick="Modal.close()" class="button">Fechar</a>
+          </div>
+          <div id="form">
+            <img
+              class="img-modal"
+              src="../assets/images/invest.svg"
+              alt="Imagem de pessoa regando planta, mas os frutos são moedas."
+            />
+
+            <form action="" onsubmit="Form.submit(event)">
+              <div class="group">
+                <ul class="group-btn">
+                  <img
+                    class="img-btn"
+                    src="../assets/images/pay-ima.svg"
+                    alt="Imagem da logomarca da empresa Imã Pay."
+                  />
+                  <li class="nav-item-open">
+                    <a href="register.html">Abrir conta</a>
+                  </li>
+                  <li class="nav-item-enter">
+                    <a href="login.html">Já sou cliente</a>
+                  </li>
+                </ul>
+              </div>
+            </form>
+          </div>
+          <h3 class="text-h3">Crie uma conta em minutos.</h3>
+          <p class="text-modal">
+            Com a Imã Pay, você pode criar sua conta em minutos. Não é
+            necessário visitar uma agência ou esperar dias.
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="../assets/js/init.js"></script>
+  </body>
+</html>
