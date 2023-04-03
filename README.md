@@ -91,7 +91,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <tr>
   <td align="center">
     <a href="https://github.com/denilsonbezerra" class="circle">
-      <img src="https://avatars.githubusercontent.com/u/97971798?v=4" class="circle" width="95"/> 
+      <img src="https://avatars.githubusercontent.com/u/97971798?v=4" width="95"/> 
     <br />
       Denilson Bezerra<br/><sub><b>Front-end & Back-end</b></sub></a><a href="https://imalearningplace.com/" title="Imã Learning Place">💻</a></a>
   </td>
@@ -142,7 +142,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
  
   <td align="center">
    <a href="https://github.com/RafaeltiMoreira">
-    <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/52933778?v=4" width="100px;" alt=""/> 
+    <img src="https://avatars.githubusercontent.com/u/52933778?v=4" width="95"/> 
   <br />
     Rafael Moreira<br/><sub><b>Front-end & Back-end</b></sub></a><a href="https://imalearningplace.com/" title="Imã Learning Place">💻</a>
   </td>
