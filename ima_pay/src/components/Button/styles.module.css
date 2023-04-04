@@ -14,4 +14,10 @@
     background: var(--btn-hover);
     color: var(--white);
 }
+
+.btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+    background-color: var(--red);
+}
   

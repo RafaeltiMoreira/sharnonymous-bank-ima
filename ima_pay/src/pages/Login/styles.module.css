@@ -5,13 +5,9 @@
 }
 
 .forgot {
-    display: flex;
-    justify-content: flex-end;
     color: var(--theme);
     font-size: 14px;
     font-weight: bold;
-    position: relative;
-    top: -25px;
     transition: 0.2s;
 }
 
@@ -26,7 +22,7 @@ fieldset {
 .fieldsetWrapper {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 22px;
 }
   
 .inputWrapper,
@@ -67,5 +63,24 @@ legend {
     font-size: 14px;
     font-family: "Poppins", sans-serif;
     color: #4e4958;
+}
+
+.linkArea {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    margin-top: 6px;
+}
+
+.linkArea span {
+    font-size: 14px;
+}
+
+.link {
+    font-size: 15px;
+}
+
+.link:hover {
+    color: var(--red);
 }
 

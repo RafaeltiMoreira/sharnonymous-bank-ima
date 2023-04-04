@@ -1,0 +1,47 @@
+.container {
+    margin: 30px auto;
+    width: 90%;
+}
+
+.form {
+    flex-direction: row;
+}
+
+.leftSide {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+.imgArea {
+    display: flex;
+    gap: 50px;
+}
+
+.leftSide img {
+    width: 450px;
+}
+
+label {
+    color: var(--theme);
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+    text-align: left !important;
+}
+
+.inputWrapper {
+    margin-bottom: 10px;
+}
+
+.inputWrapper input {
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #9c9c9c;
+    font-size: 16px;
+    color: #4e4958;
+    width: 400px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}

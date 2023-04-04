@@ -13,17 +13,9 @@ export function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState(false);
-  const [messageError, setMessageError] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
-
-  const handleInputEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-  };
-
-  const handleInputPassword = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(e.target.value);
-  };
-
+  
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -32,7 +24,7 @@ export function Login() {
 
       if (email === "" || password === "" || !validateEmail.test(email)) {
         setLoginError(true);
-        setMessageError("Digite o email e senha corretamente");
+        setErrorMessage("Digite o email e senha corretamente");
         setTimeout(() => {
           setLoginError(false);
           setEmail("");
@@ -42,7 +34,7 @@ export function Login() {
 
       if (user.email !== email || user.password !== password) {
         setLoginError(true);
-        setMessageError("Email ou senha incorretas");
+        setErrorMessage("Email ou senha incorretas");
         setTimeout(() => {
           setLoginError(false);
           setEmail("");
@@ -67,7 +59,7 @@ export function Login() {
           <fieldset>
             <div className={styles.fieldsetWrapper}>
               <legend>Acessar conta</legend>
-              {loginError && <Error msg={`${messageError}`} />}
+              {loginError && <Error msg={`${errorMessage}`} />}
               <div className={styles.inputWrapper}>
                 <label>
                   E-mail cadastrado
@@ -78,7 +70,7 @@ export function Login() {
                   name="form-email"
                   id="form-email"
                   placeholder="Digite seu e-mail"
-                  onChange={handleInputEmail}
+                  onChange={e => setEmail(e.target.value)}
                   value={email}
                 />
               </div>
@@ -93,14 +85,20 @@ export function Login() {
                   name="form-password"
                   id="form-password"
                   placeholder="Digite sua senha"
-                  onChange={handleInputPassword}
+                  onChange={e => setPassword(e.target.value)}
                   value={password}
                 />
               </div>
-              <Link className={styles.forgot} to="/recovery">
-                Esqueci minha senha
-              </Link>
             </div>
+            <div className={styles.linkArea}>
+                <div>
+                  <span>Não possui conta?</span>
+                  <Link className={styles.link} to="/register"> clique aqui</Link>
+                </div>
+                <Link className={styles.forgot} to="/recovery">
+                  Esqueci minha senha
+                </Link>
+              </div>
           </fieldset>
           <Button action={handleSubmit} txt="Entrar" />
         </form>
