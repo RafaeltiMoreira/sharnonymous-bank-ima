@@ -1,13 +1,20 @@
-import { ThemeProvider } from "styled-components"
-import { defaultTheme } from "./styles/themes/default"
-import { GlobalStyle } from "./styles/global"
+import { Home } from './pages/Home';
+import './global.module.css';
+import { Routes, Route } from 'react-router-dom';
+import { Register } from './pages/Register';
+import { Login } from './pages/Login';
+import { Recovery } from './pages/Recovery';
 
 export function App() {
 
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <GlobalStyle />
-      <h1>Hello, World!</h1>
-    </ThemeProvider>
-  )
+    <>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/recovery' element={<Recovery />} />
+      </Routes>
+    </>
+  );
 }

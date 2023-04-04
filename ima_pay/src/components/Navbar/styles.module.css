@@ -1,0 +1,13 @@
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    animation: fromLeft 1.2s;
+    box-shadow: 0 0.1rem 0.5rem var(--ice);
+}
+  
+.logo img {
+    width: 120px;
+}

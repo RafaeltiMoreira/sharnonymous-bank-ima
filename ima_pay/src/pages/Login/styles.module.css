@@ -1,0 +1,103 @@
+.container {
+    max-width: 650px;
+    margin: 50px auto;
+    width: 90%;
+}
+
+.forgot {
+    display: flex;
+    justify-content: flex-end;
+    color: var(--theme);
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    top: -25px;
+    transition: 0.2s;
+}
+
+.forgot:hover {
+    color: var(--red);
+}
+  
+form {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0.1rem 0.5rem var(--ice);
+    padding: 42px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+  
+fieldset {
+    border: none;
+}
+  
+.fieldsetWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+  
+.inputWrapper,
+.inputPass {
+    display: flex;
+    flex-direction: column;
+}
+  
+label {
+    color: var(--theme);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+  
+label span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--theme);
+}
+
+legend {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    color: var(--theme);
+    margin-bottom: 25px;
+  }
+  
+.inputWrapper input {
+    background: #fafafc;
+    border: 1px solid #e6e6f0;
+    border-radius: 10px;
+    height: 56px;
+    padding: 0 15px;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    color: #4e4958;
+}
+  
+.inputPass input {
+    background: #fafafc;
+    border: 1px solid #e6e6f0;
+    border-radius: 10px;
+    height: 56px;
+    padding: 0 15px;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    color: #4e4958;
+}
+  
+.errormsg {
+    background-color: var(--btn-hover);
+    width: 100%;
+    border-radius: 10px;
+    color: var(--white);
+    padding-left: 10px;
+    font-size: 1.1rem;
+    text-align: center;
+    display: none;
+}
+  
