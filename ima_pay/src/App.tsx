@@ -3,13 +3,10 @@ import { defaultTheme } from "./styles/themes/default"
 import { GlobalStyle } from "./styles/global"
 import "./styles/App.css"
 import Logo from "./assets/img/Logo.png"
-import Deposito from "./assets/img/deposito.png"
-import Transferencia from "./assets/img/transferencia.png"
-import Boleto from "./assets/img/boleto.png"
-import Search from "./assets/img/search.png"
-import Pix from "./assets/img/pix.png"
 import { MdSearch } from "react-icons/md"
-
+import { MdPix } from "react-icons/md"
+import { MdOutlinePayments } from "react-icons/md"
+import { BiTransferAlt } from "react-icons/bi";
 export function App() {
 
   return (
@@ -20,9 +17,9 @@ export function App() {
       </div>
       <form  action="submit">
         <div className="form"> 
-        <div className="form-pesquisa">
-          <input className="input-pesquisa" type="text" placeholder="Faça sua pesquisa"/>
-          <img src={Search}/>                    
+        <div className="div-pesquisa">
+          <input className="input-pesquisa"  type="text" placeholder="Faça sua pesquisa"/>
+          <MdSearch size={32} color="#ce1051"/>
         </div>          
         </div>
       </form>
@@ -33,7 +30,7 @@ export function App() {
             João das Neves
           </p>
           <p>R$ 114,00</p>
-          <img src={Pix}/>
+          <p className="pix"><MdPix/></p>
         </div>
 
         <div className="historico2">
@@ -41,8 +38,8 @@ export function App() {
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Depósito <br/>
             Maria das Neves
           </p>
-          <p>R$ 235,00</p>    
-          <img src={Deposito}/>     
+          <p>R$ 235,00</p>
+          <p className="transferencia"> <BiTransferAlt/> </p>    
         </div>
 
         <div className="historico3">
@@ -50,8 +47,8 @@ export function App() {
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pagamento <br/>
             Lojas Americanas
           </p>
-          <p>R$ 231,63</p>         
-          <img src={Boleto}/>   
+          <p>R$ 231,63</p>
+          <p className="pagamento"> <MdOutlinePayments/> </p>        
         </div> 
 
         <div className="historico4">
@@ -59,8 +56,8 @@ export function App() {
           <p>&nbsp;&nbsp;&nbsp;&nbsp;Transferência <br/>
             Antônio das Neves
           </p>
-          <p>R$ 231,63</p>
-          <img src={Transferencia}/>
+          <p>R$ 600,00</p>
+          <p className="transferencia"> <BiTransferAlt/> </p>
         </div>       
       </div>
     </ThemeProvider>
