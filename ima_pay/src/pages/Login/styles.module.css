@@ -1,6 +1,6 @@
 .container {
     max-width: 650px;
-    margin: 50px auto;
+    margin: 30px auto;
     width: 90%;
 }
 
@@ -17,16 +17,6 @@
 
 .forgot:hover {
     color: var(--red);
-}
-  
-form {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0.1rem 0.5rem var(--ice);
-    padding: 42px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
   
 fieldset {
@@ -51,6 +41,7 @@ label {
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 8px;
+    margin-top: 20px;
 }
   
 label span {
@@ -65,8 +56,7 @@ legend {
     font-size: 24px;
     text-align: center;
     color: var(--theme);
-    margin-bottom: 25px;
-  }
+}
   
 .inputWrapper input {
     background: #fafafc;
@@ -78,26 +68,4 @@ legend {
     font-family: "Poppins", sans-serif;
     color: #4e4958;
 }
-  
-.inputPass input {
-    background: #fafafc;
-    border: 1px solid #e6e6f0;
-    border-radius: 10px;
-    height: 56px;
-    padding: 0 15px;
-    font-size: 14px;
-    font-family: "Poppins", sans-serif;
-    color: #4e4958;
-}
-  
-.errormsg {
-    background-color: var(--btn-hover);
-    width: 100%;
-    border-radius: 10px;
-    color: var(--white);
-    padding-left: 10px;
-    font-size: 1.1rem;
-    text-align: center;
-    display: none;
-}
-  
+

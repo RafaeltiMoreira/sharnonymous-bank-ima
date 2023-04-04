@@ -5,8 +5,5 @@ type UserProps = {
     password: string;
 }
 
-export const users = [
-    {name: 'Rafael', age: 24, email: 'rafa@teste.com', password: '123'},
-    {name: 'Maria', age: 37, email: 'maria@teste.com', password: '158'}
-];
+export const users: UserProps[] = [];
 
