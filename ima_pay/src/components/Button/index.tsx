@@ -4,17 +4,15 @@ type Props = {
     txt: string;
     action: (event?: any) => void;
     size?: string;
-    disable?: boolean;
 }
 
-export function Button({ action, txt, size, disable }: Props) {
+export function Button({ action, txt, size }: Props) {
     return (
         <>
             <button 
                 onClick={action} 
                 className={styles.btn} 
                 style={{width: `${size}px`}}
-                disabled={disable}
             >{txt}
             </button>
         </>

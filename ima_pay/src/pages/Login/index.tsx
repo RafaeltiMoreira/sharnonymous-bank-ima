@@ -4,10 +4,10 @@ import { Button } from "../../components/Button";
 import { Navbar } from "../../components/Navbar";
 import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
-import { users } from "../../helpers/users";
 import { useNavigate } from "react-router-dom";
 import { Error } from "../../components/Error";
-import { validateEmail } from "../../utils/regex";
+import { users } from "../../models/users";
+import { validateLogin } from "../../utils/validateLogin";
 
 export function Login() {
   const [email, setEmail] = useState("");
@@ -15,36 +15,38 @@ export function Login() {
   const [loginError, setLoginError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
-  
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    for (let i in users) {
-      let user = users[i];
+    const validationError = validateLogin(email, password);
 
-      if (email === "" || password === "" || !validateEmail.test(email)) {
-        setLoginError(true);
-        setErrorMessage("Digite o email e senha corretamente");
-        setTimeout(() => {
-          setLoginError(false);
-          setEmail("");
-        }, 1000);
-        return true;
+    if (validationError) {
+      setLoginError(true);
+      setErrorMessage(validationError);
+      setTimeout(() => {
+        setLoginError(false);
+        setEmail("");
+      }, 1000);
+      return;
+    }
+
+    let userFound = false;
+    for (let user of users) {
+      if (user.email === email && user.password === password) {
+        userFound = true;
+        navigate(`/user/${user.id}`, { state: { user } });
+        break;
       }
+    }
 
-      if (user.email !== email || user.password !== password) {
-        setLoginError(true);
-        setErrorMessage("Email ou senha incorretas");
-        setTimeout(() => {
-          setLoginError(false);
-          setEmail("");
-          setPassword("");
-        }, 1000);
-        return;
-      }
-
-      navigate("/user");
-      return true;
+    if (!userFound) {
+      setLoginError(true);
+      setErrorMessage("Email ou senha incorretas");
+      setTimeout(() => {
+        setLoginError(false);
+      }, 1000);
+      return;
     }
   };
 
@@ -70,7 +72,7 @@ export function Login() {
                   name="form-email"
                   id="form-email"
                   placeholder="Digite seu e-mail"
-                  onChange={e => setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                   value={email}
                 />
               </div>
@@ -85,20 +87,23 @@ export function Login() {
                   name="form-password"
                   id="form-password"
                   placeholder="Digite sua senha"
-                  onChange={e => setPassword(e.target.value)}
+                  onChange={(e) => setPassword(e.target.value)}
                   value={password}
                 />
               </div>
             </div>
             <div className={styles.linkArea}>
-                <div>
-                  <span>Não possui conta?</span>
-                  <Link className={styles.link} to="/register"> clique aqui</Link>
-                </div>
-                <Link className={styles.forgot} to="/recovery">
-                  Esqueci minha senha
+              <div>
+                <span>Não possui conta?</span>
+                <Link className={styles.link} to="/register">
+                  {" "}
+                  clique aqui
                 </Link>
               </div>
+              <Link className={styles.forgot} to="/recovery">
+                Esqueci minha senha
+              </Link>
+            </div>
           </fieldset>
           <Button action={handleSubmit} txt="Entrar" />
         </form>

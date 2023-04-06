@@ -1,10 +1,10 @@
+import styles from "./styles.module.css";
 import { useState } from "react";
 import { ArrowIcon } from "../../components/ArrowIcon";
 import { Navbar } from "../../components/Navbar";
-import styles from "./styles.module.css";
 import { Button } from "../../components/Button";
 import { Error } from "../../components/Error";
-import { users } from "../../helpers/users";
+import { users } from "../../models/users";
 import { validateEmail } from "../../utils/regex";
 import { useNavigate } from "react-router-dom";
 
@@ -22,9 +22,7 @@ export function Recovery() {
   const handleClick = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    for (let i in users) {
-      let user = users[i];
-
+    for (let user of users) {
       if (email === "" || !validateEmail.test(email)) {
         setEmailErr(true);
         setMessageError("Digite um email válido");
@@ -33,7 +31,7 @@ export function Recovery() {
           setEmail("");
         }, 1000)
         return true;
-      }
+      } 
 
       if (email !== user.email) {
         setEmailErr(true);
