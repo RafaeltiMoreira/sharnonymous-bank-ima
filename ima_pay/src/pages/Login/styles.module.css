@@ -69,7 +69,6 @@ legend {
     display: flex;
     justify-content: space-between;
     margin-bottom: 48px;
-    margin-top: 6px;
 }
 
 .linkArea span {
@@ -82,5 +81,17 @@ legend {
 
 .link:hover {
     color: var(--red);
+}
+
+.iconArea {
+    position: relative;
+    bottom: 37px;
+    left: 540px;
+    width: 30px;
+}
+
+.eye {
+    cursor: pointer;
+    font-size: 20px;
 }
 

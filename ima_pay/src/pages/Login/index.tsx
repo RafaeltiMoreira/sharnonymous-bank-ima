@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ArrowIcon } from "../../components/ArrowIcon";
 import { Button } from "../../components/Button";
 import { Navbar } from "../../components/Navbar";
@@ -8,12 +8,15 @@ import { useNavigate } from "react-router-dom";
 import { Error } from "../../components/Error";
 import { users } from "../../models/users";
 import { validateLogin } from "../../utils/validateLogin";
+import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 
 export function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [seePassword, setSeePassword] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -50,6 +53,18 @@ export function Login() {
     }
   };
 
+  const toggleShow = () => {
+    if (inputRef.current) {
+      if (inputRef.current.type === "password") {
+        setSeePassword(true);
+        inputRef.current.type = "text";
+      } else {
+        setSeePassword(false);
+        inputRef.current.type = "password";
+      }
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -83,6 +98,7 @@ export function Login() {
                 </label>
 
                 <input
+                  ref={inputRef}
                   type="password"
                   name="form-password"
                   id="form-password"
@@ -90,13 +106,23 @@ export function Login() {
                   onChange={(e) => setPassword(e.target.value)}
                   value={password}
                 />
+                <button
+                  type="button"
+                  className={styles.iconArea}
+                  onClick={toggleShow}
+                >
+                  {seePassword ? (
+                    <BsEyeFill className={styles.eye} />
+                  ) : (
+                    <BsEyeSlashFill className={styles.eye} />
+                  )}
+                </button>
               </div>
             </div>
             <div className={styles.linkArea}>
               <div>
                 <span>Não possui conta?</span>
                 <Link className={styles.link} to="/register">
-                  {" "}
                   clique aqui
                 </Link>
               </div>
