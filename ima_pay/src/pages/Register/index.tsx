@@ -9,6 +9,7 @@ import { cpfMask } from "../../utils/cpf";
 import { phoneMask } from "../../utils/phone";
 import { useNavigate } from "react-router-dom";
 import { User } from "../../types/User";
+import { ModalTerms } from "../../components/ModalTerms";
 
 export function Register() {
   const navigate = useNavigate();
@@ -22,7 +23,8 @@ export function Register() {
   const [success, setSucces] = useState(false);
   const [users, setUsers] = useState<User[]>([]);
   const [idCounter, setIdCounter] = useState(1);
-  const [showModal, setShowModal] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
 
   const isFormValid =
     cpf !== "" &&
@@ -70,7 +72,9 @@ export function Register() {
 
     const isValid = inputValid();
 
-    if (isValid) {
+    let isFormFilled = name && email && password && celular && cpf;
+
+    if (isValid && isChecked) {
       const newUser: User = {
         id: idCounter,
         name,
@@ -88,13 +92,20 @@ export function Register() {
         setSucces(false);
       }, 1300);
       return true;
+    } else if(!isChecked && isFormFilled) {
+      setRegisterError(true);
+      setErrorMessage("Por favor, concorde com os termos");
+      setTimeout(() => {
+        setRegisterError(false);
+      }, 1000);
+      return false;
     }
   };
 
   return (
     <>
       <div className={styles.container}>
-        <form className={styles.form}>
+        <form className={styles.form} id="form">
           <div className={styles.leftSide}>
             <div className={styles.imgArea}>
               <ArrowIcon />
@@ -113,7 +124,7 @@ export function Register() {
                 type="text"
                 name="cpf"
                 id="cpf"
-                onChange={(e) => setCpf(cpfMask(e.target.value))}
+                onChange={e => setCpf(cpfMask(e.target.value))}
                 value={cpf}
               />
             </div>
@@ -123,7 +134,7 @@ export function Register() {
                 type="text"
                 name="name"
                 id="name"
-                onChange={(e) => setName(e.target.value)}
+                onChange={e => setName(e.target.value)}
                 value={name}
                 minLength={3}
               />
@@ -134,7 +145,7 @@ export function Register() {
                 type="tel"
                 name="cel"
                 id="cel"
-                onChange={(e) => setCelular(phoneMask(e.target.value))}
+                onChange={e => setCelular(phoneMask(e.target.value))}
                 value={celular}
                 maxLength={15}
               />
@@ -145,7 +156,7 @@ export function Register() {
                 type="email"
                 name="email"
                 id="email"
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={e => setEmail(e.target.value)}
                 value={email}
               />
             </div>
@@ -155,18 +166,26 @@ export function Register() {
                 type="password"
                 name="password"
                 id="password"
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={e => setPassword(e.target.value)}
                 value={password}
                 placeholder="Digite uma senha forte"
               />
             </div>
             <div className={styles.checkbox}>
-              <input type="checkbox" id="checkbox1" />
-              <button type="button" onClick={() => setShowModal(true)} className={styles.btn}>
-                Aceite termos
-              </button>  
+              <input 
+                type="checkbox" 
+                id="checkbox1" 
+                checked={isChecked} 
+                onChange={e => setIsChecked(e.target.checked)}
+              />
+              <div className={styles.terms}>
+                <span>Li e concordo com os</span>
+                <button type="button" onClick={() => setIsModalOpen(true)} className={styles.btn}>
+                   Termos de Serviço
+                </button>
+              </div>
             </div>
-            {showModal && <p>OLÁ</p>}
+            <ModalTerms isOpen={isModalOpen} closeModal={() => {setIsModalOpen(!isModalOpen)}}/>
             <Button size="400" action={handleSubmit} txt="Enviar" />
           </div>
         </form>
