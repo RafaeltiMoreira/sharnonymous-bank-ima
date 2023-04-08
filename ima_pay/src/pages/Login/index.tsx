@@ -9,9 +9,10 @@ import { Error } from "../../components/Error";
 import { users } from "../../models/users";
 import { validateLogin } from "../../utils/validateLogin";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
+import { cpfMask } from "../../utils/cpf";
 
 export function Login() {
-  const [email, setEmail] = useState("");
+  const [cpf, setCpf] = useState("");
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -22,21 +23,21 @@ export function Login() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const validationError = validateLogin(email, password);
+    const validationError = validateLogin(cpf, password);
 
     if (validationError) {
       setLoginError(true);
       setErrorMessage(validationError);
       setTimeout(() => {
         setLoginError(false);
-        setEmail("");
+        setCpf("");
       }, 1000);
       return;
     }
 
     let userFound = false;
     for (let user of users) {
-      if (user.email === email && user.password === password) {
+      if (user.cpf === cpf && user.password === password) {
         userFound = true;
         navigate(`/user/${user.id}`, { state: { user } });
         break;
@@ -45,7 +46,7 @@ export function Login() {
 
     if (!userFound) {
       setLoginError(true);
-      setErrorMessage("Email ou senha incorretas");
+      setErrorMessage("CPF ou senha inválidos");
       setTimeout(() => {
         setLoginError(false);
       }, 1000);
@@ -70,68 +71,57 @@ export function Login() {
       <Navbar />
       <div className={styles.container}>
         <form>
-          <div>
-            <ArrowIcon />
-          </div>
-          <fieldset>
-            <div className={styles.fieldsetWrapper}>
+          <div className={styles.fieldsetWrapper}>
+            <div className={styles.title}>
+              <ArrowIcon />
               <legend>Acessar conta</legend>
-              {loginError && <Error msg={`${errorMessage}`} />}
-              <div className={styles.inputWrapper}>
-                <label>
-                  E-mail cadastrado
-                  <span>(digite um e-mail que mais utilize)</span>
-                </label>
-                <input
-                  type="email"
-                  name="form-email"
-                  id="form-email"
-                  placeholder="Digite seu e-mail"
-                  onChange={(e) => setEmail(e.target.value)}
-                  value={email}
-                />
-              </div>
-
-              <div className={styles.inputWrapper}>
-                <label>
-                  Senha <span>(mínimo de 6 caracteres)</span>
-                </label>
-
-                <input
-                  ref={inputRef}
-                  type="password"
-                  name="form-password"
-                  id="form-password"
-                  placeholder="Digite sua senha"
-                  onChange={(e) => setPassword(e.target.value)}
-                  value={password}
-                />
-                <button
-                  type="button"
-                  className={styles.iconArea}
-                  onClick={toggleShow}
-                >
-                  {seePassword ? (
-                    <BsEyeFill className={styles.eye} />
-                  ) : (
-                    <BsEyeSlashFill className={styles.eye} />
-                  )}
-                </button>
-              </div>
             </div>
-            <div className={styles.linkArea}>
-              <div>
-                <span>Não possui conta?</span>
-                <Link className={styles.link} to="/register">
-                  clique aqui
-                </Link>
-              </div>
-              <Link className={styles.forgot} to="/recovery">
-                Esqueci minha senha
-              </Link>
+            {loginError && <Error msg={`${errorMessage}`} />}
+            <div className={styles.inputWrapper}>
+              <label>CPF</label>
+              <input
+                type="text"
+                name="cpf"
+                id="cpf"
+                placeholder="Digite seu CPF"
+                onChange={(e) => setCpf(cpfMask(e.target.value))}
+                value={cpf}
+              />
             </div>
-          </fieldset>
+
+            <div className={`${styles.inputWrapper} ${styles.inputPass}`}>
+              <label>Senha</label>
+              <input
+                ref={inputRef}
+                type="password"
+                name="form-password"
+                id="form-password"
+                placeholder="Digite sua senha"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+              />
+              <button
+                type="button"
+                className={styles.iconArea}
+                onClick={toggleShow}
+              >
+                {seePassword ? (
+                  <BsEyeFill className={styles.eye} />
+                ) : (
+                  <BsEyeSlashFill className={styles.eye} />
+                )}
+              </button>
+            </div>
+          </div>
           <Button action={handleSubmit} txt="Entrar" />
+          <div className={styles.linkArea}>
+            <Link className={styles.link} to="/recovery">
+              Esqueci minha senha
+            </Link>
+            <Link className={styles.link} to="/register">
+              Ainda não sou cliente
+            </Link>
+          </div>
         </form>
       </div>
     </>

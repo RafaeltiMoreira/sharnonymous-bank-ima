@@ -7,7 +7,7 @@ export const users: User[] = [
         email: "rafa@teste.com", 
         password: "rafa158",
         celular: "41 99916-5432",
-        cpf: "157.156.142-23"
+        cpf: "107.760.129-83"
     },
     {
         id: 2,

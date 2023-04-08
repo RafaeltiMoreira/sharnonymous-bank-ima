@@ -1,8 +1,6 @@
-import { validateEmail } from "./regex";
-
-export function validateLogin(email: string, password: string): string | null {
-    if (email === "" || password === "" || !validateEmail.test(email)) {
-      return "Digite o email e senha";
+export function validateLogin(cpf: string, password: string): string | null {
+    if (cpf === "" || password === "") {
+      return "Digite o cpf e senha";
     }
   
     return null;
