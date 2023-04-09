@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+label {
+  margin-right: 190px;
+}
+
+label#text-email {
+  margin-top: 10px;
+  margin-right: 105px;
+}
+
+.logoImaPay {
+  width: 180px;
+  height: 130px;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#text-email {
+  text-align: right;
+  margin-right: 10px;
+}
+
+#text-senha {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.formularioEmail,
+.formularioSenha {
+  display: flex;
+  align-items: center;
+  background-color: #eeeeee;
+  width: 250px;
+  height: 40px;
+  padding: 1px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.formularioEmail input,
+.formularioSenha input {
+  flex: 1;
+  border: 0;
+  background-color: #eeeeee;
+  margin-left: 5px;
+}
+
+.formularioSenha small {
+  position: absolute;
+  bottom: 330px;
+}
+
+#email:focus {
+  outline: 0;
+}
+
+#senha:focus {
+  outline: 0;
+}
+
+#envelope,
+#cadeado {
+  color: #2c053b;
+}
+
+.esqueci-senha {
+  margin-top: 5px;
+  margin-left: 140px;
+  font-size: 10px;
+}
+
+.acessar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#botao-acessar {
+  width: 300px;
+  height: 40px;
+  border-radius: 8px;
+  background: #2c053b;
+  box-shadow: 0px 12.1167px 24.2334px rgba(1, 11, 253, 0.12);
+  color: #eeeeee;
+  cursor: pointer;
+  transition: 1s;
+}
+
+#botao-acessar:hover {
+  background: #1c0127;
+}
+
+.cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+#msgError {
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
