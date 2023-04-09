@@ -1,5 +1,5 @@
 import styles from './styles.module.css';
-import ImaPayLogo from '../../assets/logo-pay-ima.png';
+import ImaPayLogo from '../../assets/logo-ima.webp';
 
 export function Navbar() {
     return (
