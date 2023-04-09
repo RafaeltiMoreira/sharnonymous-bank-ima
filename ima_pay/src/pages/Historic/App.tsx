@@ -1,26 +1,15 @@
-<<<<<<< HEAD
 import { ThemeProvider } from "styled-components"
 import { defaultTheme } from "./styles/themes/default"
 import { GlobalStyle } from "./styles/global"
-import "./styles/App.css"
+import "./App.css"
 import Logo from "./assets/img/Logo.png"
 import { MdSearch } from "react-icons/md"
 import { MdPix } from "react-icons/md"
 import { MdOutlinePayments } from "react-icons/md"
 import { BiTransferAlt } from "react-icons/bi";
-=======
-import { Home } from './pages/Home';
-import './global.module.css';
-import { Routes, Route } from 'react-router-dom';
-import { Register } from './pages/Register';
-import { Login } from './pages/Login';
-import { Recovery } from './pages/Recovery';
-import { UserPage } from './pages/User';
-
->>>>>>> main
 export function App() {
+
   return (
-<<<<<<< HEAD
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
       <div className='logo'>
@@ -73,16 +62,4 @@ export function App() {
       </div>
     </ThemeProvider>
   )
-=======
-    <>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/user/:userId' element={<UserPage />} />
-        <Route path='/recovery' element={<Recovery />} />
-      </Routes>
-    </>
-  );
->>>>>>> main
 }
