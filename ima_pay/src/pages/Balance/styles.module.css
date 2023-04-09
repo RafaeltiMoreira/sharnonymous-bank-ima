@@ -52,8 +52,6 @@
 .body{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
 .body .container{
     width: 100%;
@@ -91,4 +89,131 @@
     font-family: 'Poppins' sans-serif;
     color: #fff;
     margin: 0 0.5em;
+}
+.realBalance{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+}
+.realBalance span{
+    color: #0ead00;
+    margin: 0 1em;
+}
+.realBalance h1{
+    color: var(--theme);
+    font-size: 64px;
+    margin: 0;
+    padding: 0;
+}
+.realBalance p{
+    color: var(--theme);
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+.balanceDetails{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1em 0;
+}
+.balanceDetails p{
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--red);
+    margin: 0;
+    padding: 0;
+}
+.lastTransfer{
+    width: 100%;
+    height: 100%;
+    margin: 1em 0;
+}
+.lastTransfer section{
+    background-color: var(--backCard);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--theme);
+    padding: 0.5em 0.3em;
+    box-shadow: 0 0.2em 0.5rem #555;
+    border-radius: 0.5em;
+    margin: 0.4em 0;
+}
+.lastTransfer h3{
+    color: var(--theme);
+    font-weight: 600;
+}
+.lastTransfer h4{
+    color: var(--theme);
+    font-weight: 600;
+    padding: 0.4em;
+}
+.lastTransfer p{
+    color: var(--theme);
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0.3em;
+}
+.footerTransfer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.footerTransfer h3 {
+    color: var(--theme);
+    font-size: 24px;
+    font-weight: 700;
+    margin: 1em;
+}
+.footerTransfer:hover{
+    background-color: var(--backCard);
+    border-radius: 1em;
+    box-shadow: 0 0.2em 0.5rem var(--red);
+    padding: 0 2em 0 2em;
+    transform: translate(5px, 5px);
+}
+.sideCard{
+    height: 100%;
+    width: 100%;
+    margin: 0.5em 0;
+}
+.sideCard h2{
+    margin: 0.5em 0;
+    color: var(--theme);
+    font-weight: 800;
+    font-size: 32px;
+}
+.sideCard section{
+    background-color: var(--backCard);
+    box-shadow: 0 0.1rem 0.5rem var(--ice);
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1em;
+}
+.sideCard section h1{
+    margin: 1em 0;
+    color: var(--theme);
+    font-size: 32px;
+}
+.sideCard section p, h3{
+    color: var(--theme);
+}
+.sideCard section p span{
+    font-weight: 700;
+}
+.sideCard section:hover{
+    transform: translate(5px, 5px);
 }
