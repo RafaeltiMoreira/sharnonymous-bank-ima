@@ -1,4 +1,4 @@
-import LogoIma from '../../assets/pay-ima.svg';
+import LogoIma from '../../assets/logo-ima.webp';
 import styles from './styles.module.css';
 import { NavLink } from 'react-router-dom'
 

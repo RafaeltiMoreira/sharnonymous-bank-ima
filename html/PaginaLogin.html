@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styleLogin.css" />
+    <script src="https://kit.fontawesome.com/6238ca50e2.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="logo">
+      <img class="logoImaPay" src="./assets/img/3 Logo 3.png" alt="Imã Pay" />
+      <p><strong>Acessar conta</strong></p>
+    </div>
+
+    <form id="form">
+      <label id="text-email" for="email">Digite seu e-mail:</label>
+      <div class="formularioEmail">
+        <input type="email" id="email" placeholder="Digite seu e-mail" />
+        <i id="envelope" class="fa-solid fa-envelope fa-2x"></i>
+      </div>
+
+      <label for="senha">Senha:</label>
+      <div class="formularioSenha">
+        <input type="password" id="senha" placeholder="Digite sua senha" />
+        <i id="cadeado" class="fa-solid fa-lock fa-2x"></i>
+      </div>
+
+      <div class="esqueci-senha">
+        <a href="">Esqueci minha senha</a>
+      </div>
+      <div class="acessar">
+        <button id="botao-acessar" value="Acessar">Acessar</button>
+      </div>
+    </form>
+
+    <div class="cadastro">
+      Ainda não tem cadastro?<a href=""><strong> &nbsp Cadastrar agora!</strong> </a>
+    </div>
+    <script src="./assets/js/scriptPaginaLogin.js"></script>
+  </body>
+</html>
