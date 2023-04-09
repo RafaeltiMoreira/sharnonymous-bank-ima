@@ -11,9 +11,6 @@ export function NavbarHome() {
                 </div>
                 <nav>
                     <ul className={styles.navMenu}>
-                        <li className={styles.navItem}>
-                            <NavLink to="/">Inicio</NavLink>
-                        </li>
                         <li className={styles.navItemEntrar}>
                             <NavLink to="/login">Entrar</NavLink>
                         </li>
