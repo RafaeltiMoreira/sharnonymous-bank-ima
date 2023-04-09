@@ -75,6 +75,10 @@
     padding: 0.4em 0;
     box-shadow: 0 0.1rem 0.5rem var(--ice);
 }
+.cardTransfer:hover{
+    background-color: var(--theme);
+    transform: translate(-10px, -5px)
+}
 .cardTransfer section{
     margin: 0.5em;
     display: flex;
