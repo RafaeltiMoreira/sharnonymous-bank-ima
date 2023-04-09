@@ -8,7 +8,6 @@ import { UserPage } from './pages/User';
 import { Balance } from './pages/Balance';
 
 export function App() {
-
   return (
     <>
       <Routes>

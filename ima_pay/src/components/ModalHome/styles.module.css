@@ -19,45 +19,48 @@
     padding: 1.2rem 1.2rem;
     border-radius: 10px;
 }
-  
-#form {
+
+.content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 80px;
+    align-items: center;
 }
-  
-.textModal {
-    display: flex;
-    justify-content: flex-start;
-    padding: 0 1.5rem;
-    margin-bottom: 2rem;
-    color: var(--theme);
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-  
-.imgBtn {
-    width: 10%;
-}
-  
+
 .imgModal {
-    width: 30%;
+    width: 550px;
 }
-  
-.groupBtn {
+
+.logo {
+    width: 140px;
+}
+
+.group {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     gap: var(--gap);
 }
-  
-.group {
+
+.group ul {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.text {
+    margin-top: 30px;
+}
+
+.text h3 {
+    text-align: left;
+    font-size: 32px;
+}
+
+.text p {
     color: var(--theme);
-    font-size: 1rem;
-    font-weight: 700;
-    justify-content: flex-end;
+    font-size: 20px;
+    font-weight: 500;
 }
   
 .navItemEnter a {
@@ -95,6 +98,9 @@
     font-weight: 700;
     color: var(--theme);
     transition: 0.2s;
+    position: relative;
+    left: 1050px;
+    top: 0;
 }
 
 .btn:hover {

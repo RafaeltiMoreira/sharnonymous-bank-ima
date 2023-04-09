@@ -1,84 +1,127 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ArrowIcon } from "../../components/ArrowIcon";
 import { Button } from "../../components/Button";
 import { Navbar } from "../../components/Navbar";
 import styles from "./styles.module.css";
-import { Link } from 'react-router-dom';
-import { users } from "../../helpers/users";
-import { useNavigate } from 'react-router-dom'; 
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { Error } from "../../components/Error";
+import { users } from "../../models/users";
+import { validateLogin } from "../../utils/validateLogin";
+import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
+import { cpfMask } from "../../utils/cpf";
 
 export function Login() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const navigate = useNavigate();
+  const [cpf, setCpf] = useState("");
+  const [password, setPassword] = useState("");
+  const [loginError, setLoginError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [seePassword, setSeePassword] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const navigate = useNavigate();
 
-    const handleInputEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setEmail(e.target.value);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const validationError = validateLogin(cpf, password);
+
+    if (validationError) {
+      setLoginError(true);
+      setErrorMessage(validationError);
+      setTimeout(() => {
+        setLoginError(false);
+        setCpf("");
+      }, 1000);
+      return;
     }
 
-    const handleInputPassword = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setPassword(e.target.value);
+    let userFound = false;
+    for (let user of users) {
+      if (user.cpf === cpf && user.password === password) {
+        userFound = true;
+        navigate(`/user/${user.id}`, { state: { user } });
+        break;
+      }
     }
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-
-        for(let i in users) {
-            let user = users[i];
-            if(user.email !== email && user.password !== password) {
-              alert('USUARIO ERRADO')
-                return false;
-            }
-        }
-
-        navigate('/user');
-        return true;
+    if (!userFound) {
+      setLoginError(true);
+      setErrorMessage("CPF ou senha inválidos");
+      setTimeout(() => {
+        setLoginError(false);
+      }, 1000);
+      return;
     }
+  };
+
+  const toggleShow = () => {
+    if (inputRef.current) {
+      if (inputRef.current.type === "password") {
+        setSeePassword(true);
+        inputRef.current.type = "text";
+      } else {
+        setSeePassword(false);
+        inputRef.current.type = "password";
+      }
+    }
+  };
 
   return (
     <>
       <Navbar />
       <div className={styles.container}>
-        <form className={styles.form}>
-        <div>
-            <ArrowIcon />
-        </div>
-        <fieldset>
-            <div className={styles.fieldsetWrapper}>
+        <form>
+          <div className={styles.fieldsetWrapper}>
+            <div className={styles.title}>
+              <ArrowIcon />
               <legend>Acessar conta</legend>
-              <div className={styles.inputWrapper}>
-                <label>
-                  E-mail cadastrado
-                  <span>(digite um e-mail que mais utilize)</span>
-                </label>
-                <input
-                  type="email"
-                  name="form-email"
-                  id="form-email"
-                  placeholder="Digite seu e-mail"
-                  onChange={handleInputEmail}
-                  value={email}
-                />
-              </div>
-
-              <div className={styles.inputPass}>
-                <label>
-                  Senha <span>(mínimo de 6 caracteres)</span>
-                </label>
-
-                <input
-                  type="password"
-                  name="form-password"
-                  id="form-password"
-                  placeholder="Digite sua senha"
-                  onChange={handleInputPassword}
-                  value={password}
-                />
-              </div>
-              <Link className={styles.forgot} to="/recovery">Esqueci minha senha</Link>
             </div>
-          </fieldset>
-          <Button action={handleSubmit} txt="Entrar"/>
+            {loginError && <Error msg={`${errorMessage}`} />}
+            <div className={styles.inputWrapper}>
+              <label>CPF</label>
+              <input
+                type="text"
+                name="cpf"
+                id="cpf"
+                placeholder="Digite seu CPF"
+                onChange={(e) => setCpf(cpfMask(e.target.value))}
+                value={cpf}
+              />
+            </div>
+
+            <div className={`${styles.inputWrapper} ${styles.inputPass}`}>
+              <label>Senha</label>
+              <input
+                ref={inputRef}
+                type="password"
+                name="form-password"
+                id="form-password"
+                placeholder="Digite sua senha"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+              />
+              <button
+                type="button"
+                className={styles.iconArea}
+                onClick={toggleShow}
+              >
+                {seePassword ? (
+                  <BsEyeFill className={styles.eye} />
+                ) : (
+                  <BsEyeSlashFill className={styles.eye} />
+                )}
+              </button>
+            </div>
+          </div>
+          <Button action={handleSubmit} txt="Entrar" />
+          <div className={styles.linkArea}>
+            <Link className={styles.link} to="/recovery">
+              Esqueci minha senha
+            </Link>
+            <Link className={styles.link} to="/register">
+              Ainda não sou cliente
+            </Link>
+          </div>
         </form>
       </div>
     </>

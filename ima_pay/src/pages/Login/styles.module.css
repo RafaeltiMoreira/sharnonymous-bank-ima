@@ -1,48 +1,28 @@
 .container {
-    max-width: 650px;
-    margin: 50px auto;
+    max-width: 400px;
+    margin: 30px auto;
     width: 90%;
 }
 
-.forgot {
+.title {
     display: flex;
-    justify-content: flex-end;
-    color: var(--theme);
-    font-size: 14px;
-    font-weight: bold;
-    position: relative;
-    top: -25px;
-    transition: 0.2s;
+    gap: 50px;
 }
 
-.forgot:hover {
-    color: var(--red);
-}
-  
-form {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0.1rem 0.5rem var(--ice);
-    padding: 42px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-  
-fieldset {
-    border: none;
-}
   
 .fieldsetWrapper {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 22px;
 }
   
-.inputWrapper,
-.inputPass {
+.inputWrapper {
     display: flex;
     flex-direction: column;
+}
+
+.inputWrapper.inputPass {
+    margin-bottom: 22px;
 }
   
 label {
@@ -51,6 +31,7 @@ label {
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 8px;
+    margin-top: 20px;
 }
   
 label span {
@@ -65,8 +46,7 @@ legend {
     font-size: 24px;
     text-align: center;
     color: var(--theme);
-    margin-bottom: 25px;
-  }
+}
   
 .inputWrapper input {
     background: #fafafc;
@@ -74,30 +54,40 @@ legend {
     border-radius: 10px;
     height: 56px;
     padding: 0 15px;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Poppins", sans-serif;
     color: #4e4958;
 }
-  
-.inputPass input {
-    background: #fafafc;
-    border: 1px solid #e6e6f0;
-    border-radius: 10px;
-    height: 56px;
-    padding: 0 15px;
+
+.linkArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 22px 0 15px 0;
+}
+
+.link {
+    font-size: 15px;
+    color: var(--theme);
     font-size: 14px;
-    font-family: "Poppins", sans-serif;
-    color: #4e4958;
+    font-weight: bold;
+    transition: 0.2s;
 }
-  
-.errormsg {
-    background-color: var(--btn-hover);
-    width: 100%;
-    border-radius: 10px;
-    color: var(--white);
-    padding-left: 10px;
-    font-size: 1.1rem;
-    text-align: center;
-    display: none;
+
+.link:hover {
+    color: var(--red);
 }
-  
+
+.iconArea {
+    position: relative;
+    bottom: 37px;
+    left: 290px;
+    width: 30px;
+}
+
+.eye {
+    cursor: pointer;
+    font-size: 20px;
+}
+

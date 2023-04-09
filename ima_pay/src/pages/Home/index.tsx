@@ -6,10 +6,7 @@ import { ModalHome } from "../../components/ModalHome";
 import { useState } from "react";
 
 export function Home() {
-    const [openModal, setOpenModal] = useState(false);
-    const handleClick = () => {
-        setOpenModal(true);
-    }
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
         <>
@@ -20,7 +17,7 @@ export function Home() {
                     <h4 className={styles.textH4}>Bem-vindos a Imã Pay 🎉</h4>
                     <h1 className={styles.textH1}>Descomplicado e fácil de investir</h1>
                     <p>Na Imã Pay seus investimentos são planejados com especialistas.</p>
-                    <Button action={handleClick} txt='Investir agora' />
+                    <Button action={() => setIsModalOpen(true)} txt='Investir agora' />
                     </div>
                     <div className={styles.homeImg}>
                     <img
@@ -29,7 +26,7 @@ export function Home() {
                     />
                     </div>
                 </section>
-                <ModalHome isOpen={openModal} closeModal={() => {setOpenModal(!openModal)}} />
+                <ModalHome isOpen={isModalOpen} closeModal={() => {setIsModalOpen(!isModalOpen)}} />
             </main>
         </>
     );
