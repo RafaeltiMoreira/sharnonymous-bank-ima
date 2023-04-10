@@ -38,9 +38,6 @@ export function ModalTransfersPix() {
         reset,
     } = useForm<NewTransfersFormInputs>({
         resolver: zodResolver(newTransfersFormSchema),
-        defaultValues: {
-            type: "input"
-        }
     });
 
     async function handleCreateNewTransfers(data: NewTransfersFormInputs) {

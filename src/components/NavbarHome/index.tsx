@@ -4,16 +4,16 @@ import { NavLink } from 'react-router-dom'
 
 export function NavbarHome() {
     return (
-       <>
+        <>
             <header className={styles.navigation}>
                 <div className={styles.logo}>
                     <img src={LogoIma} alt="Logo Imã" />
                 </div>
                 <nav>
                     <ul className={styles.navMenu}>
-                        <li className={styles.navItem}>
+                        {/*<li className={styles.navItem}>
                             <NavLink to="/">Inicio</NavLink>
-                        </li>
+                        </li>*/}
                         <li className={styles.navItemEntrar}>
                             <NavLink to="/login">Entrar</NavLink>
                         </li>
@@ -28,6 +28,6 @@ export function NavbarHome() {
                     <span className={styles.bar}></span>
                 </div>
             </header>
-       </>
+        </>
     );
 }
