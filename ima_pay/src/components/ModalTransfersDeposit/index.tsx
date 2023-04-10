@@ -41,9 +41,6 @@ export function ModalTransfersDeposit() {
         reset,
     } = useForm<NewTransfersDpFormInputs>({
         resolver: zodResolver(newTransfersDpFormSchema),
-        defaultValues: {
-            type: "input",
-        },
     });
 
     async function handleCreateNewTransfersDp(data: NewTransfersDpFormInputs) {
