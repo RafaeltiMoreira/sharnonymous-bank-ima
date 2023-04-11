@@ -1,4 +1,3 @@
-import { Home } from './pages/Home';
 import './global.module.css';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';

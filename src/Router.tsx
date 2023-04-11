@@ -10,15 +10,17 @@ import { Recovery } from "./pages/Recovery";
 export function Router() {
     return (
         <Routes>
+
             <Route path='/' element={<Home />} />
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
             <Route path='/recovery' element={<Recovery />} />
 
             <Route path="/" element={<DefaultLayout />}>
-                <Route path="/transfers/:userId" element={<Transfers />} >
-                    <Route path="/search" element={<SearchTransfers />} />
-                </Route>
+                <Route path="/transfers/:userId" element={<Transfers />} />
+            </Route>
+            <Route path="/" element={<DefaultLayout />}>
+                <Route path="/search" element={<SearchTransfers />} />
             </Route>
 
         </Routes>

@@ -1,7 +1,7 @@
 import { HeaderLoginContainer, HeaderLoginContent } from "./styles";
 import { Power } from "phosphor-react";
 import { NavLink } from "react-router-dom";
-import logoImaPay from "../../assets/pay-ima.svg";
+import logoImaPay from "../../assets/logo-ima.webp";
 
 export function HeaderLogin() {
     return (
