@@ -8,8 +8,7 @@ export function UserPage() {
     <>
       {user ? (
         <>
-          <h1>{user.name}</h1>
-          <p>Email: {user.email}</p>
+          <h1>Olá, seja bem vindo (a) {user.name}</h1>
         </>
       ) : (
         <div>Usuário não encontrado.</div>

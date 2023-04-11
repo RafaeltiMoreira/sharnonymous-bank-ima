@@ -1,8 +1,6 @@
 import { CaretCircleLeft, MagnifyingGlass } from "phosphor-react";
 import { NavLink } from "react-router-dom";
-
 import { ButtonReturn, ViewTransfersContainer } from "./styles";
-import { TableTransfers } from "../../components/TableTransfers";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -31,7 +29,7 @@ export function ViewTransfers() {
         <div>
             <ViewTransfersContainer onSubmit={handleSubmit(handleViewTransfers)}>
 
-                <NavLink to="/transfers" title="Voltar para tela de transferências">
+                <NavLink to="/transfers/:userId" title="Voltar para tela de transferências">
                     <ButtonReturn className="btn-back">
                         <CaretCircleLeft className="btn-back" size={32} />
                     </ButtonReturn>
@@ -49,7 +47,7 @@ export function ViewTransfers() {
                 </button>
 
             </ViewTransfersContainer>
-            <TableTransfers />
+
         </div>
     );
 }

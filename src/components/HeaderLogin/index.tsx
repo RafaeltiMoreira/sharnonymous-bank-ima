@@ -24,3 +24,4 @@ export function HeaderLogin() {
         </HeaderLoginContainer>
     )
 }
+console.log(HeaderLogin)
