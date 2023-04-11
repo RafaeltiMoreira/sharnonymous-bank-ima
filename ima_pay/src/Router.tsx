@@ -2,16 +2,25 @@ import { Routes, Route } from "react-router-dom";
 import { Transfers } from "./pages/Transfers";
 import { SearchTransfers } from "./pages/SearchTransfers";
 import { DefaultLayout } from "./layouts/DefaultLayout";
+import { Home } from "./pages/Home";
+import { Register } from "./pages/Register";
+import { Login } from "./pages/Login";
+import { UserPage } from "./pages/User";
+import { Recovery } from "./pages/Recovery";
 
 export function Router() {
     return (
         <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/user/:userId" element={<UserPage />} />
+            <Route path="/recovery" element={<Recovery />} />
 
             <Route path="/" element={<DefaultLayout />}>
                 <Route path="/transfers" element={<Transfers />} />
                 <Route path="/search" element={<SearchTransfers />} />
             </Route>
-
         </Routes>
-    )
+    );
 }

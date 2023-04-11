@@ -1,21 +1,18 @@
-import { Home } from './pages/Home';
-import './global.module.css';
-import { Routes, Route } from 'react-router-dom';
-import { Register } from './pages/Register';
-import { Login } from './pages/Login';
-import { Recovery } from './pages/Recovery';
-import { UserPage } from './pages/User';
+import "./global.module.css";
+import { BrowserRouter } from "react-router-dom";
+
+import { ThemeProvider } from "styled-components";
+import { lightTheme } from "./styles/theme/light";
+import { Router } from "./Router";
+import { GlobalStyle } from "./styles/global";
 
 export function App() {
   return (
-    <>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/user/:userId' element={<UserPage />} />
-        <Route path='/recovery' element={<Recovery />} />
-      </Routes>
-    </>
+    <ThemeProvider theme={lightTheme}>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+      <GlobalStyle />
+    </ThemeProvider>
   );
 }
