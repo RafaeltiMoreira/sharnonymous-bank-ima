@@ -32,7 +32,7 @@ export const Content = styled(Dialog.Content)`
       border: 0;
       background: ${({ theme }) => theme.colors["--background-modal"]};
       color: ${(props) => props.theme.colors["--theme"]};
-      padding: 1rem;
+      padding: 0.7rem;
 
       &::placeholder {
         color: ${(props) => props.theme.colors["--theme"]};

@@ -9,7 +9,7 @@ export function HeaderLogin() {
             <HeaderLoginContent>
                 <img src={logoImaPay} alt="Logo com texto Imã Pay" />
 
-                <NavLink to="/">
+                <NavLink to="/sharnonymous-ima-pay">
                     <button type="submit">
                         <Power
                             className="btn-power"

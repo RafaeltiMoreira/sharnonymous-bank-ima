@@ -58,7 +58,7 @@ export function TodoTransfers() {
                         <TransfersCards style={{ cursor: "pointer" }}>
                             <header>
                                 <Bank size={32} color="#ce1051" />
-                                <span>Depósito</span>
+                                <span>Transferência</span>
                             </header>
                         </TransfersCards>
                     </Dialog.Trigger>

@@ -69,7 +69,7 @@ export function ModalTransfersDeposit() {
             <Overlay />
             <Content>
                 <Title>
-                    Depósito
+                    Transferência
                     <Bank size={32} />
                 </Title>
 

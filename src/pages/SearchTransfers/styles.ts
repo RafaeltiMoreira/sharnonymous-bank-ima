@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const ViewTransfersContainer = styled.form`
+  display: flex;
+  gap: 1rem;
+
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
-  padding: 3rem 1.5rem 0;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  padding: 5rem 1.5rem 0;
 
   input {
     flex: 1;
@@ -48,6 +47,7 @@ export const ViewTransfersContainer = styled.form`
     }
 
     &:not(:disabled):hover {
+      background: ${({ theme }) => theme.colors.white};
       border: 1px solid ${(props) => props.theme.colors["--theme"]};
 
       transition: background-color 0.2s border-color 0.2s;
@@ -61,7 +61,7 @@ export const ButtonReturn = styled.div`
   border: 1px solid transparent;
   padding: 1rem;
   border-radius: 10px;
-  background: ${(props) => props.theme.colors.ice};
+  background: ${({ theme }) => theme.colors.ice};
 
   &:hover {
     background: ${({ theme }) => theme.colors.white};
