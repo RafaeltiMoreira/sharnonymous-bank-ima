@@ -8,8 +8,9 @@ export function Router() {
         <Routes>
 
             <Route path="/" element={<DefaultLayout />}>
-                <Route path="/transfers" element={<Transfers />} />
-                <Route path="/search" element={<SearchTransfers />} />
+                <Route path="/transfers/:userId" element={<Transfers />} >
+                    <Route path="/search" element={<SearchTransfers />} />
+                </Route>
             </Route>
 
         </Routes>
