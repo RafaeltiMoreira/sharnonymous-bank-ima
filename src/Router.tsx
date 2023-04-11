@@ -11,7 +11,7 @@ export function Router() {
     return (
         <Routes>
 
-            <Route path='/' element={<Home />} />
+            <Route path='/sharnonymous-ima-pay' element={<Home />} />
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
             <Route path='/recovery' element={<Recovery />} />
