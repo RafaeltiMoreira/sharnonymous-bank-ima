@@ -14,11 +14,10 @@ export function Router() {
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/user/:userId" element={<UserPage />} />
             <Route path="/recovery" element={<Recovery />} />
 
             <Route path="/" element={<DefaultLayout />}>
-                <Route path="/transfers" element={<Transfers />} />
+                <Route path="/transfers/:userId" element={<Transfers />} />
                 <Route path="/search" element={<SearchTransfers />} />
             </Route>
         </Routes>
